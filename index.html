@@ -303,7 +303,7 @@
           <div class="name">{{item.name}}<img src="playing.gif" v-if="inx==xh&&play"></div>
           <div class="authortime">
             <div class="author">{{item.author}}</div>
-            <div class="time">{{item.duration}}</div>
+            <div class="time">{{formatTime(item.duration)}}</div>
           </div>
         </li>
       </ul>

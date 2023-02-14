@@ -398,7 +398,218 @@
 <script src="slider.js"></script>
 <script src="https://y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
 <script>
-/*Obfuscated by JShaman.com*/new Vue({'el':'.musicct','data':{'player':new QMplayer(),'musicList':[],'lrcList':[],'lrcText':[],'scrollY':0x0,'music':[],'isPlay':![],'xh':0x0,'curtime':0x0,'setinter':'','si1':'','si2':'','exp':![],'volume':0x1,'isSlider':![]},'mounted'(){fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music')['then'](_0xeedb7e=>{return _0xeedb7e['json']();})['then'](_0x26c06b=>{_0x26c06b['forEach'](_0xaaf719=>{this['musicList']['push'](_0xaaf719['songId']);this['lrcList']['push'](_0xaaf719['lrc']);});});this['player']['on']('play',()=>{this['xh']=this['player']['data']['index'];this['music']=[];this['isPlay']=!![];let _0x2edb15=this['player']['data']['songs'];for(let _0x4f0fe9 in _0x2edb15){this['music']['push']({'name':_0x2edb15[_0x4f0fe9]['name'],'author':_0x2edb15[_0x4f0fe9]['singer'][0x1c408^0x1c408]['name'],'duration':_0x2edb15[_0x4f0fe9]['interval'],'cover':'https://y.qq.com/music/photo_new/T002R300x300M000'+_0x2edb15[_0x4f0fe9]['album']['mid']+'.jpg'});}this['lrcText']=[];fetch('lrc/'+this['lrcList'][this['xh']])['then'](_0x5dcc11=>{return _0x5dcc11['text']();})['then'](_0x34125a=>{let _0xb68e48=_0x34125a['split']('\x0a');_0xb68e48['forEach']((_0x41168c,_0x426ac5)=>{let _0x38c85d=_0x41168c['split'](']');if(_0x38c85d[0xf2f8e^0xf2f8f]==undefined){_0x38c85d[0x2294c^0x2294d]='';}this['lrcText']['push']({'xh':_0x426ac5+(0xeabdb^0xeabda),'time':_0x38c85d[0x21b7e^0x21b7e]+']','text':_0x38c85d[0xb3332^0xb3333]});});});});this['player']['on']('pause',()=>{this['isPlay']=![];});this['player']['on']('timeupdate',()=>{if(!this['isSlider']){this['curtime']=this['player']['currentTime'];}});this['si1']=new Slider('#jd',{'theme':'green','size':'s','initvalue':0x0,'showtip':![],'slideend':(_0x2e2255,_0x4b2a5d)=>{if(this['setinter']){clearInterval(this['setinter']);}if(_0x4b2a5d!='end'&&this['curtime']>(0xa3f91^0xa3f91)){this['isSlider']=!![];this['curtime']=_0x2e2255*this['music'][this['xh']]['duration']/(0x6dd67^0x6dd03);}if(_0x4b2a5d=='end'){this['player']['__']['audio']['currentTime']=_0x2e2255*this['music'][this['xh']]['duration']/(0x29592^0x295f6);this['progress']();this['isSlider']=![];if(!this['isPlay']){this['play']();}}}});this['si2']=new Slider('#volume',{'theme':'green','size':'s','initvalue':0x64,'showtip':![],'slideend':_0x17ee80=>{this['volume']=_0x17ee80/(0x38784^0x387e0);this['player']['__']['audio']['volume']=_0x17ee80/(0xa8198^0xa81fc);}});},'watch':{'volume':{'immediate':!![],'handler'(_0x5c9cb9){this['$nextTick'](function(){if(_0x5c9cb9==(0x34676^0x34676)){this['player']['__']['audio']['volume']=0x0;this['si2']['go'](0x0);}else{this['player']['__']['audio']['volume']=this['volume'];this['si2']['go'](this['volume']*0x64);}});}},'curtime':{'immediate':!![],'handler'(_0x1ba62f){this['$nextTick'](function(){if(_0x1ba62f==0x0){this['si1']['disabled']();}else{this['si1']['enabled']();}});}},'isPlay':{'immediate':!![],'handler'(_0x3e7f75){this['$nextTick'](()=>{if(_0x3e7f75){this['progress']();}});}}},'computed':{'thestyle'(){if(this['isPlay']){return'animation-play-state:running';}else{return'animation-play-state:paused';}}},'methods':{'formatTime'(_0x12cfab){let _0x4d3c46=Math['floor'](_0x12cfab/0x3c);let _0x540501=Math['floor'](_0x12cfab%0x3c);if(_0x4d3c46<(0x760e7^0x760ed)){_0x4d3c46='0'+_0x4d3c46;}else{_0x4d3c46=_0x4d3c46;}if(_0x540501<0xa){_0x540501='0'+_0x540501;}else{_0x540501=_0x540501;}return _0x4d3c46+':'+_0x540501;},'playIndex'(_0x390e21){this['xh']=_0x390e21;this['player']['play'](this['musicList'],{'index':this['xh']});},'play'(){this['player']['play'](this['musicList'],{'index':this['xh']});},'pause'(){this['player']['pause']();},'prev'(){this['player']['playPrev']();},'next'(){this['player']['playNext']();},'progress'(){this['setinter']=setInterval(()=>{let _0x308037=this['curtime']/this['music'][this['xh']]['duration']*(0x408cb^0x408af);this['si1']['go'](_0x308037);this['lrcText']['forEach'](_0x529762=>{this['$set'](_0x529762,'cur',![]);});let _0x16f3e6=this['lrcText']['filter'](_0x2eb960=>{let _0x5014cf=Number(_0x2eb960['time']['substr'](0xd5195^0xd5194,0xe0312^0xe0310));let _0x1fc66a=Number(_0x2eb960['time']['substring'](0x4,_0x2eb960['time']['length']-0x1));let _0x279981=_0x5014cf*0x3c+_0x1fc66a;let _0x3d9970=this['curtime'];return _0x3d9970-_0x279981>=0x0;});this['$set'](_0x16f3e6[_0x16f3e6['length']-0x1],'cur',!![]);let _0x398279=document['querySelector']('.geci')['offsetHeight']*0.8/(0x56bfb^0x56bd5);_0x398279=Math['floor'](_0x398279/0x2);if(_0x16f3e6[_0x16f3e6['length']-0x1]['xh']>_0x398279&&this['scrollY']<_0x398279*(0x3fc90^0x3fcbe)){this['scrollY']=-(0xacab7^0xaca99)*(_0x16f3e6[_0x16f3e6['length']-0x1]['xh']-_0x398279);}else{this['scrollY']=0x0;}},0x3e8);}}});
+new Vue({
+    el: '.musicct',
+    data: {
+        player: new QMplayer(),
+        musicList: [],//要播放的音乐数组，只是songid
+        lrcList: [],//要播放的音乐歌词文件地址
+        lrcText: [],//当前歌曲对应的歌词
+        scrollY: 0,//歌词滚动Y
+        music: [], //存放播放列表,这个是有很多详细内容,数据拼接的
+        isPlay: false,
+        xh: 0, //播放的音乐的序号
+        curtime: 0, //播放當前時間
+        setinter: '', //保存定時器名稱
+        si1: '',//进度条
+        si2: '',//音量对象
+        exp: false,
+        volume: 1,
+        isSlider: false//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
+    },
+    mounted() {
+        fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music').then((rs) => {
+            return rs.json()
+        }).then((data) => {
+            data.forEach((el) => {
+                this.musicList.push(el.songId)
+                this.lrcList.push(el.lrc)
+            })
+        })
+        //this.player.play(this.musicList, {index: this.xh})
+        // 监听事件
+        this.player.on("play", () => {
+            this.xh = this.player.data.index//赋值当前歌曲的XH
+            this.music = []
+            this.isPlay = true
+            let songs = this.player.data.songs
+            for (let i in songs) {
+                this.music.push({
+                    name: songs[i].name,
+                    author: songs[i].singer[0].name,
+                    duration: songs[i].interval,
+                    cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg'
+                })
+            }
+            //获取当前歌曲对应歌词
+            this.lrcText=[]
+            fetch('lrc/' + this.lrcList[this.xh])
+                .then((response) => {
+                    return response.text();
+                })
+                .then((myJson) => {
+                    let line = myJson.split('\n');
+                    line.forEach((el, xh) => {
+                        let rs = el.split(']');
+                        if (rs[1] == undefined) {
+                            rs[1] = "";
+                        }
+                        this.lrcText.push({xh: xh + 1, time: rs[0] + ']', text: rs[1]});
+                    })
+                });
+        })
+        this.player.on("pause", () => {
+            this.isPlay = false
+        })
+        this.player.on("timeupdate", () => {
+            if (!this.isSlider) {//意思是滑块释放当前时间才变动
+                this.curtime = this.player.currentTime
+            }
+        })
+        this.si1 = new Slider(
+            '#jd', {
+                theme: 'green', //red,yellow,black,green,
+                size: 's', //s,m,l
+                initvalue: 0, //初始值
+                showtip: false,
+                slideend: (val, string) => {
+                    if (this.setinter) {
+                        clearInterval(this.setinter)
+                    }
+                    if (string != 'end' && this.curtime > 0) {//意思是滑动中当前时间要变动
+                        this.isSlider = true
+                        this.curtime = val * this.music[this.xh].duration / 100//
+                    }
+                    if (string == 'end') {
+                        this.player.__.audio.currentTime = val * this.music[this.xh].duration / 100
+                        this.progress()
+                        this.isSlider = false
+                        if (!this.isPlay) {
+                            this.play()
+                        }
+                    }
+                }
+            });
+        this.si2 = new Slider(
+            '#volume', {
+                theme: 'green', //red,yellow,black,green,
+                size: 's', //s,m,l
+                initvalue: 100, //初始值
+                showtip: false,
+                slideend: (val) => {
+                    this.volume = val / 100
+                    this.player.__.audio.volume = val / 100
+                }
+            });
+    },
+    watch: {
+        volume: {
+            immediate: true,
+            handler(value) {
+                this.$nextTick(function () {
+                    if (value == 0) {
+                        this.player.__.audio.volume = 0
+                        this.si2.go(0)
+                    } else {
+                        this.player.__.audio.volume = this.volume
+                        this.si2.go(this.volume * 100)
+                    }
+                })
+            }
+        },
+        curtime: {
+            immediate: true,
+            handler(value) {
+                this.$nextTick(function () {
+                    if (value == 0) {
+                        this.si1.disabled()
+                    } else {
+                        this.si1.enabled()
+                    }
+                })
+            }
+        },
+        isPlay: {
+            immediate: true,
+            handler(value) {
+                this.$nextTick(() => {
+                    if (value) {
+                        this.progress()
+                    }
+                })
+            }
+        }
+    },
+    computed: {
+        thestyle() {
+            if (this.isPlay) {
+                return 'animation-play-state:running'
+            } else {
+                return 'animation-play-state:paused'
+            }
+        }
+    },
+    methods: {
+        formatTime(value) {
+            let fen = Math.floor(value / 60)
+            let yu = Math.floor(value % 60)
+            if (fen < 10) {
+                fen = '0' + fen
+            } else {
+                fen = fen
+            }
+            if (yu < 10) {
+                yu = '0' + yu
+            } else {
+                yu = yu
+            }
+            return fen + ':' + yu
+        },
+        playIndex(xh) {
+            this.xh = xh
+            this.player.play(this.musicList, {index: this.xh})
+        },
+        play() {
+            this.player.play(this.musicList, {index: this.xh})
+        },
+        pause() {
+            this.player.pause()
+        },
+        prev() {
+            this.player.playPrev();
+
+        },
+        next() {
+            this.player.playNext();
+        },
+        progress() {
+            this.setinter = setInterval(() => {
+                let pos = this.curtime / this.music[this.xh].duration * 100
+                this.si1.go(pos)
+                //歌词处理
+                this.lrcText.forEach((el) => {
+                    this.$set(el, 'cur', false)
+                })
+                let fi = this.lrcText.filter((el) => {
+                    let min = Number(el.time.substr(1, 2));
+                    let sec = Number(el.time.substring(4, el.time.length - 1));
+                    let lastSec = min * 60 + sec;
+                    let diff = this.curtime;
+                    return diff - lastSec >= 0
+                })
+                this.$set(fi[fi.length - 1], 'cur', true)
+                let midxh = document.querySelector('.geci').offsetHeight * 0.8 / 46//这个是中间序号，这样滚动加亮在整体中间
+                midxh = Math.floor(midxh / 2)
+                if (fi[fi.length - 1].xh > midxh && this.scrollY < midxh * 46) {
+                    this.scrollY = -46 * (fi[fi.length - 1].xh - midxh);
+                } else {
+                    this.scrollY = 0
+                }
+            }, 1000)
+
+        }
+    }
+})
 </script>
 </body>
 

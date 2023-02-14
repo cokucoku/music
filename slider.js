@@ -93,6 +93,7 @@ let Slider = function(el, option) {
     })
     wrap.addEventListener('touchstart', function(e) {
         //e.stopPropagation()
+        drag = true
         down = true
         old_x = e.targetTouches[0].clientX - wrapleft;
     }, { passive: true })
@@ -121,7 +122,10 @@ let Slider = function(el, option) {
     document.addEventListener('touchend', function(e) {
         //e.preventDefault()
         down = false
-        //chuli('end')
+        if(drag){
+           chuli('end')
+        }
+        drag=false
         wrapleft = wrap.offsetLeft
     }, { passive: true })
     document.addEventListener('touchmove', function(e) {

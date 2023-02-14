@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1468805_e4ww4tlwoob.css">
+  <link rel="stylesheet" href="slider.css">
+  <title>[实战]54音乐播放器</title>
+  <style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  .bgimg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: blur(15px);
+    opacity: .6;
+  }
+
+  .bgmark {
+    background-color: rgba(0, 0, 0, .35);
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  body {
+    background: #888;
+  }
+
+  .mark {
+    background-color: rgba(0, 0, 0, .35);
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .musiclist {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #222;
+    z-index: 5;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(-100%);
+    color: #eee
+  }
+
+  .musiclist .list {
+    height: calc(100vh - 62px);
+    overflow-y: auto
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #3eaf7c;
+  }
+
+  ::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    background: #333;
+  }
+
+  .musiclist li {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #444;
+    padding: 15px 20px 15px;
+    cursor: pointer;
+  }
+
+  .musiclist.exp {
+    transform: translateX(0%);
+  }
+
+  .musiclist .ti {
+    padding: 20px 20px;
+    color: #3eaf7c;
+    border-bottom: solid 1px #444;
+  }
+
+  .musiclist .ti i {
+    font-size: 12px;
+    font-style: normal;
+    margin-left: 4px;
+    color: #aaa
+  }
+
+  .musiclist li .name {
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .musiclist li .name img {
+    margin-left: 5px;
+  }
+
+  .musiclist li .authortime {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+  }
+
+  .musiclist li .author {
+    color: #aaa
+  }
+
+  .musiclist li .time {
+    color: #666
+  }
+
+  .musiclist li.cur {
+    background: #000
+  }
+
+  .musiclist li.cur,
+  .musiclist li.cur .author,
+  .musiclist li.cur .time {
+    color: #3eaf7c
+  }
+
+
+  .music {
+    display: flex;
+    align-items: center;
+    color: #eee;
+    position: absolute;
+    z-index: 3;
+    width: 80%;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+  }
+
+  .iconfont {
+    font-size: 22px;
+    transition: all .2s
+  }
+
+  .music .iconfont {
+    margin-right: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .music .iconfont:hover {
+    color: #3eaf7c
+  }
+
+  .music .musicinfo {
+    margin-right: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .music .musicinfo .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 12px;
+  }
+
+  .music .musicinfo .time em {
+    font-style: normal;
+  }
+
+  .music #icolist {
+    color: #3eaf7c
+  }
+
+  .music #icolist i {
+    font-style: normal;
+    font-size: 12px;
+  }
+
+
+  #volume {
+    width: 50px;
+  }
+
+  .cpj {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 3;
+    width: 342px;
+    transform: translate(-50%,-50%);
+  }
+  .cpjn {
+    border-radius: 100%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background: linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0, linear-gradient(60deg, rgba(42, 41, 40, .85) 60%, transparent 60%) no-repeat 0 100%, repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+    background-size: 50% 100%, 100% 50%, 100% 100%;
+    box-shadow: 0 0 13px rgba(0, 0, 0, .9);
+    animation: rotate 16s infinite linear;
+    animation-play-state: paused;
+  }
+
+  #pic {
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    margin: 25%;
+    border: solid 4px #3eaf7c;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .myu-enter,
+  .myu-leave-to {
+    opacity: 0;
+  }
+
+  .myu-enter-to,
+  .myu-leave {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .iconfont {
+      font-size: 14px;
+    }
+
+    .cpj {
+      width: 50%;
+    }
+
+    .music .iconfont {
+      margin-right: 15px;
+    }
+
+    .music .musicinfo {
+      margin-right: 15px;
+    }
+
+    .music .musicinfo .info {
+      display: none
+    }
+
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  </style>
+</head>
+
+<body>
+<div class="musicct">
+  <div class="bgmark"></div>
+  <div class="bgimg" v-if="music.length>0" :style="'background-image:url('+music[xh].cover+')'"></div>
+  <div class="musiclist" :class="{exp:exp}">
+    <div class="ti">播放列表<i>{{music.length}}首歌曲</i></div>
+    <div class="list" v-if="music.length>0">
+      <ul>
+        <li v-for="(item,inx) in music" :class="{cur:inx==xh}" @click.stop="playIndex(inx)">
+          <div class="name">{{item.name}}<img src="playing.gif" v-if="inx==xh&&play"></div>
+          <div class="authortime">
+            <div class="author">{{item.author}}</div>
+            <div class="time">{{item.duration}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <transition name="myu">
+    <div class="mark" v-if="exp" @click="exp=false"></div>
+  </transition>
+  <div class="cpj" v-if="music.length>0">
+    <div class="cpjn" :style="thestyle">
+      <img id="pic" :src="music[xh].cover">
+    </div>
+  </div>
+  <div class="music">
+    <div class="iconfont iconziyuan1" @click="prev"></div>
+    <div class="iconfont iconbofang" v-if="!isPlay" @click="play"></div>
+    <div class="iconfont iconstop" v-if="isPlay" @click="pause"></div>
+    <div class="iconfont iconziyuan" @click="next"></div>
+    <div class="musicinfo">
+      <div class="info" v-if="music.length>0">
+        <div class="nameauthor">{{music[xh].name}} - {{music[xh].author}}</div>
+        <div class="time"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em></div>
+      </div>
+      <div class="info" v-else>
+        <div class="nameauthor">-- - --</div>
+        <div class="time"><em>00:00</em> / <em>00:00</em></div>
+      </div>
+      <div id="jd" class="jd"></div>
+    </div>
+    <div id="icolist" class="iconfont icongedan" @click.stop="exp=!exp"><i>{{music.length}}</i></div>
+    <div class="iconfont iconyinliang" @click="volume=0" v-if="volume!=0"></div>
+    <div style="color: #3eaf7c" class="iconfont iconjingyin" @click="volume=1" v-else></div>
+    <div id="volume"></div>
+  </div>
+</div>
+<script src="vue.min.js"></script>
+<script src="slider.js"></script>
+<script src="https://y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
+<script>
+/*Obfuscated by JShaman.com*/new Vue({'el':'.musicct','data':{'player':new QMplayer(),'musicList':[],'music':[],'isPlay':![],'xh':0x0,'curtime':0x0,'setinter':'','si1':'','si2':'','exp':![],'volume':0x1,'isSlider':![]},'mounted'(){fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music')['then'](_0x37a0c5=>{return _0x37a0c5['json']();})['then'](_0x5c24b4=>{this['musicList']=_0x5c24b4;});this['player']['on']('play',()=>{console['log'](this['player']);this['xh']=this['player']['data']['index'];this['music']=[];this['isPlay']=!![];let _0x1867a2=this['player']['data']['songs'];for(let _0x540109 in _0x1867a2){this['music']['push']({'name':_0x1867a2[_0x540109]['name'],'author':_0x1867a2[_0x540109]['singer'][0x9cb85^0x9cb85]['name'],'duration':_0x1867a2[_0x540109]['interval'],'cover':'https://y.qq.com/music/photo_new/T002R300x300M000'+_0x1867a2[_0x540109]['album']['mid']+'.jpg'});}});this['player']['on']('pause',()=>{this['isPlay']=![];});this['player']['on']('timeupdate',()=>{if(!this['isSlider']){this['curtime']=this['player']['currentTime'];}});this['si1']=new Slider('#jd',{'theme':'green','size':'s','initvalue':0x0,'showtip':![],'slideend':(_0x5e16de,_0x5104d6)=>{if(this['setinter']){clearInterval(this['setinter']);}if(_0x5104d6!='end'&&this['curtime']>(0x54e73^0x54e73)){this['isSlider']=!![];this['curtime']=_0x5e16de*this['music'][this['xh']]['duration']/(0x7b832^0x7b856);}if(_0x5104d6=='end'){this['player']['__']['audio']['currentTime']=_0x5e16de*this['music'][this['xh']]['duration']/(0xeeb55^0xeeb31);this['progress']();this['isSlider']=![];if(!this['isPlay']){this['play']();}}}});this['si2']=new Slider('#volume',{'theme':'green','size':'s','initvalue':0x64,'showtip':![],'slideend':_0x501435=>{this['volume']=_0x501435/(0xea446^0xea422);this['player']['__']['audio']['volume']=_0x501435/(0x95034^0x95050);}});},'watch':{'volume':{'immediate':!![],'handler'(_0x2bcd6c){this['$nextTick'](function(){if(_0x2bcd6c==(0x7e3d9^0x7e3d9)){this['player']['__']['audio']['volume']=0xaccae^0xaccae;this['si2']['go'](0x5d7cf^0x5d7cf);}else{this['player']['__']['audio']['volume']=this['volume'];this['si2']['go'](this['volume']*(0x3a028^0x3a04c));}});}},'curtime':{'immediate':!![],'handler'(_0x4f1318){this['$nextTick'](function(){if(_0x4f1318==(0x7acc2^0x7acc2)){this['si1']['disabled']();}else{this['si1']['enabled']();}});}},'isPlay':{'immediate':!![],'handler'(_0xc062bb){this['$nextTick'](()=>{if(_0xc062bb){this['progress']();}});}}},'computed':{'thestyle'(){if(this['isPlay']){return'animation-play-state:running';}else{return'animation-play-state:paused';}}},'methods':{'formatTime'(_0x34548a){let _0x40e82b=Math['floor'](_0x34548a/0x3c);let _0x5122a4=Math['floor'](_0x34548a%0x3c);if(_0x40e82b<0xa){_0x40e82b='0'+_0x40e82b;}else{_0x40e82b=_0x40e82b;}if(_0x5122a4<(0xefa79^0xefa73)){_0x5122a4='0'+_0x5122a4;}else{_0x5122a4=_0x5122a4;}return _0x40e82b+':'+_0x5122a4;},'playIndex'(_0x654e4a){this['xh']=_0x654e4a;this['player']['play'](this['musicList'],{'index':this['xh']});},'play'(){this['player']['play'](this['musicList'],{'index':this['xh']});},'pause'(){this['player']['pause']();},'prev'(){this['player']['playPrev']();},'next'(){this['player']['playNext']();},'progress'(){this['setinter']=setInterval(()=>{let _0x1cb8a6=this['curtime']/this['music'][this['xh']]['duration']*0x64;this['si1']['go'](_0x1cb8a6);},0x3e8);}}});
+</script>
+</body>
+
+</html>

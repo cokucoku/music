@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80151e91-3cf7-40c9-8c80-ffa6d6a54c67" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/02-mq.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/02-mq.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/03-lzy.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/03-lzy.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/04-gl.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/04-gl.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/05-xhn.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/05-xhn.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/06-kdzyddf.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/06-kdzyddf.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/07-zypf.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/07-zypf.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/08-hnyy.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/08-hnyy.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/09-lxl.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/09-lxl.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/10-bysh.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/10-bysh.lrc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="400" column="4720" selection-start-line="400" selection-start-column="4720" selection-end-line="400" selection-end-column="4720" />
+            <state relative-caret-position="508">
+              <caret line="400" column="4758" selection-start-line="400" selection-start-column="4758" selection-end-line="400" selection-end-column="4758" />
               <folding>
                 <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#7;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -117,12 +124,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1676351946410</updated>
-      <workItem from="1676351947490" duration="12068000" />
+      <workItem from="1676351947490" duration="13794000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12068000" />
+    <option name="totallyTimeSpent" value="13794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -170,8 +177,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="400" column="4720" selection-start-line="400" selection-start-column="4720" selection-end-line="400" selection-end-column="4720" />
+        <state relative-caret-position="508">
+          <caret line="400" column="4758" selection-start-line="400" selection-start-column="4758" selection-end-line="400" selection-end-column="4758" />
           <folding>
             <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#7;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

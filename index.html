@@ -14,9 +14,15 @@
     list-style: none;
     box-sizing: border-box;
   }
+  .musicct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
 
   .music-top {
-    height: 86vh;
+    height: 88vh;
     position: relative;
     z-index: 3;
     display: flex;
@@ -25,7 +31,7 @@
   }
 
   .topn {
-    width: 80%;
+    width: 82%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -56,7 +62,7 @@
   }
 
   .music-bottom {
-    height: 14vh;
+    height: 12vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -208,7 +214,7 @@
     display: flex;
     align-items: center;
     color: #eee;
-    width: 80%;
+    width: 82%;
   }
 
   .iconfont {
@@ -303,7 +309,10 @@
 
     .cpj {
       width: 50%;
-      margin-top: 9vh;
+      margin: 6vh 0;
+    }
+    .music-top{
+      height: 80vh;
     }
 
     .topn {
@@ -315,9 +324,13 @@
       height: 50vh;
       width: 100%;
     }
+    #volume{display: none}
 
     .music .iconfont {
       margin-right: 15px;
+    }
+    .music .iconfont.iconyinliang{
+      margin-right: 0;
     }
 
     .music .musicinfo {
@@ -325,7 +338,9 @@
     }
 
     .music .musicinfo .info {
-      display: none
+      font-size: 12px;
+      line-height: 12px;
+      height: 12px;
     }
 
   }

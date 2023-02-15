@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80151e91-3cf7-40c9-8c80-ffa6d6a54c67" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,10 +18,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="407" column="4900" selection-start-line="407" selection-start-column="4900" selection-end-line="407" selection-end-column="4900" />
+            <state relative-caret-position="783">
+              <caret line="408" column="4787" selection-start-line="408" selection-start-column="4787" selection-end-line="408" selection-end-column="4787" />
               <folding>
-                <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,6 +42,10 @@
       <find>this.xh</find>
       <find>27</find>
       <find>46</find>
+      <find>formatTime</find>
+      <find>play</find>
+      <find>this.player()</find>
+      <find>musicList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -121,12 +125,12 @@
       <option name="presentableId" value="Default" />
       <updated>1676351946410</updated>
       <workItem from="1676351947490" duration="15690000" />
-      <workItem from="1676422242656" duration="3493000" />
+      <workItem from="1676422242656" duration="7672000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19183000" />
+    <option name="totallyTimeSpent" value="23362000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -181,10 +185,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="407" column="4900" selection-start-line="407" selection-start-column="4900" selection-end-line="407" selection-end-column="4900" />
+        <state relative-caret-position="783">
+          <caret line="408" column="4787" selection-start-line="408" selection-start-column="4787" selection-end-line="408" selection-end-column="4787" />
           <folding>
-            <element signature="n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#div#1;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

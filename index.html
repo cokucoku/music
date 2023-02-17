@@ -426,7 +426,7 @@
 <body>
 <div class="musicct">
   <div class="klok" :style="{opacity:expGc?1:0}">
-    <div class="ht" v-for="items in lrcOkText" v-show="items.cur">
+    <div class="ht" v-for="(items,xh) in lrcOkText" :key="xh" v-show="items.cur">
     <span v-for="item in toklokText(items)" :content="item.text" :class="{cur:item.cur}"
           :style="'--duration:'+item.duration+'s'">{{item.text}}</span>
     </div>
@@ -670,6 +670,7 @@ new Vue({
                                     this.lrcOkText.push({btime: rs[0] + ']', text: el});
                                 }
                             })
+                            console.log(lrcOkText)
                         });
                 }, 4000)
             }

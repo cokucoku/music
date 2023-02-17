@@ -59,7 +59,7 @@
     background-image: linear-gradient(#ff0, #dace00, #ff0);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; /*需要文字透明*/
-    animation: jd var(--duration) forwards linear;
+    animation: jd var(--duration) forwards;
   }
 
   @keyframes jd {
@@ -425,11 +425,9 @@
 
 <body>
 <div class="musicct">
-  <div class="klok" :style="{opacity:expGc?1:0}">
-    <div class="ht" v-for="items in lrcOkText" v-show="items.cur">
-    <span v-for="item in toklokText(items)" :content="item.text" :class="{cur:item.cur}"
+  <div class="klok" v-if="expGc" v-cloak>
+    <span v-for="item in klokText" :content="item.text" :class="{cur:item.cur}"
           :style="'--duration:'+item.duration+'s'">{{item.text}}</span>
-    </div>
   </div>
   <div class="bgmark" v-if="music.length>0" v-cloak></div>
   <div class="bgimg" v-if="music.length>0" :style="'background-image:url('+music[xh].cover+')'" v-cloak></div>
@@ -685,39 +683,6 @@ new Vue({
         }
     },
     methods: {
-        toklokText(el) {
-            let klokText = []
-            let myJson = el.text
-            let line = myJson.split('[');
-            line.forEach((el, xh) => {
-                let rs = el.split(']');
-                if (rs[1] == ' ') {
-                    rs[1] = "";//本来想&nbsp;的 但是:before不支持HTML
-                }
-                if (rs[1] == undefined) {
-                    rs[1] = "";
-                }
-                if (rs[1] || rs[0]) {
-                    klokText.push({btime: '[' + rs[0] + ']', text: rs[1]});
-                }
-            })
-            klokText.reduce((pre, next) => {
-                let blastSec = this.toSec(pre);
-                let elastSec = this.toSec(next);
-                this.$set(pre, 'duration', elastSec - blastSec)
-                return next
-            })
-            let fiii = klokText.filter((el) => {
-                let lastSec = this.toSec(el);
-                let diff = this.curtime;
-                return diff - lastSec >=0
-            })
-            fiii.forEach((el) => {
-                this.$set(el, 'cur', true)
-            })
-            return klokText
-
-        },
         formatTime(value) {
             let fen = Math.floor(value / 60)
             let yu = Math.floor(value % 60)
@@ -776,17 +741,42 @@ new Vue({
                     }
                 }
                 //卡拉OK歌词处理
-                this.lrcOkText.forEach((el) => {
-                    this.$set(el, 'cur', false)
-                })
                 let fii = this.lrcOkText.filter((el) => {
                     let lastSec = this.toSec(el);
                     let diff = this.curtime;
                     return diff - lastSec >= 0
                 })
                 if (fii[fii.length - 1]) {
-                    this.$set(fii[fii.length - 1], 'cur', true)
+                    this.klokText = []
+                    let myJson = fii[fii.length - 1].text
+                    let line = myJson.split('[');
+                    line.forEach((el, xh) => {
+                        let rs = el.split(']');
+                        if (rs[1] == ' ') {
+                            rs[1] = "";//本来想&nbsp;的 但是:before不支持HTML
+                        }
+                        if (rs[1] == undefined) {
+                            rs[1] = "";
+                        }
+                        if (rs[1] || rs[0]) {
+                            this.klokText.push({btime: '[' + rs[0] + ']', text: rs[1]});
+                        }
+                    })
                 }
+                this.klokText.reduce((pre, next) => {
+                    let blastSec = this.toSec(pre);
+                    let elastSec = this.toSec(next);
+                    this.$set(pre, 'duration', elastSec - blastSec)
+                    return next
+                })
+                let fiii = this.klokText.filter((el) => {
+                    let lastSec = this.toSec(el);
+                    let diff = this.curtime;
+                    return diff - lastSec >= 0
+                })
+                fiii.forEach((el) => {
+                    this.$set(el, 'cur', true)
+                })
             }, 1)
 
         }

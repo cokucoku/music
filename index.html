@@ -660,7 +660,7 @@ new Vue({
                             return response.text();
                         })
                         .then((myJson) => {
-                            let line = myJson.split('\r\n');
+                            let line = myJson.split('\n');
                             line.forEach((el) => {
                                 let rs = el.split(']');
                                 if (rs[1] == undefined) {

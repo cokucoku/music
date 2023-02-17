@@ -746,7 +746,7 @@ new Vue({
         next() {
             this.player.playNext();
         },
-        toSec(el) {//[00:12:52]类型时间转为秒函数
+        toSec(el) {//[00:12.52]类型时间转为秒函数
             let min = Number(el.btime.substr(1, 2));
             let sec = Number(el.btime.substring(4, el.btime.length - 1));
             let lastSec = min * 60 + sec;

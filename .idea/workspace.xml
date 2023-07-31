@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80151e91-3cf7-40c9-8c80-ffa6d6a54c67" name="默认的" comment="" />
+    <list default="true" id="80151e91-3cf7-40c9-8c80-ffa6d6a54c67" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -12,34 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="496" column="6873" selection-start-line="496" selection-start-column="6873" selection-end-line="496" selection-end-column="6873" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#8;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index-2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -150,16 +125,16 @@
       <workItem from="1676440563130" duration="1263000" />
       <workItem from="1676516679125" duration="13056000" />
       <workItem from="1676595201780" duration="26261000" />
-      <workItem from="1676854528774" duration="549000" />
+      <workItem from="1676854528774" duration="1089000" />
+      <workItem from="1690780218685" duration="388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65065000" />
+    <option name="totallyTimeSpent" value="65993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -197,22 +172,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/klok.html" />
+    <entry file="file://$PROJECT_DIR$/index-歌词转场不突兀.html" />
+    <entry file="file://$PROJECT_DIR$/index-2.html" />
     <entry file="file://$PROJECT_DIR$/index - 副本.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="408" selection-start-line="408" selection-end-line="626" selection-end-column="2" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#div#7;n#div#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8544#15943#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index-歌词转场不突兀.html" />
-    <entry file="file://$PROJECT_DIR$/index-2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
+        <state relative-caret-position="-3078">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
@@ -222,8 +186,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="496" column="6873" selection-start-line="496" selection-start-column="6873" selection-end-line="496" selection-end-column="6873" />
+        <state relative-caret-position="-1537">
+          <caret line="422" column="10" lean-forward="true" selection-start-line="422" selection-start-column="10" selection-end-line="422" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

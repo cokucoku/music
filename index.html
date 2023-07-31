@@ -521,7 +521,7 @@ new Vue({
         fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music').then((rs) => {
             return rs.json()
         }).then((data) => {
-            data.forEach((el) => {
+            data.list.forEach((el) => {
                 this.musicList.push(el.songId)
                 this.lrcList.push(el.lrc)
                 this.klokList.push(el.ok)

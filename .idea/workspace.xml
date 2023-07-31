@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="80151e91-3cf7-40c9-8c80-ffa6d6a54c67" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,7 +15,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="630" column="54" lean-forward="true" selection-start-line="630" selection-start-column="54" selection-end-line="630" selection-end-column="54" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#8;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -30,8 +46,6 @@
       <find>formatTime</find>
       <find>play</find>
       <find>this.player()</find>
-      <find>musicList</find>
-      <find>music</find>
       <find>80%</find>
       <find>yinliang</find>
       <find>iconfont</find>
@@ -45,6 +59,8 @@
       <find>ani</find>
       <find>lrcOkText</find>
       <find>console.log</find>
+      <find>musicList</find>
+      <find>music</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,15 +142,16 @@
       <workItem from="1676516679125" duration="13056000" />
       <workItem from="1676595201780" duration="26261000" />
       <workItem from="1676854528774" duration="1089000" />
-      <workItem from="1690780218685" duration="388000" />
+      <workItem from="1690780218685" duration="1949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65993000" />
+    <option name="totallyTimeSpent" value="67554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -186,8 +203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1537">
-          <caret line="422" column="10" lean-forward="true" selection-start-line="422" selection-start-column="10" selection-end-line="422" selection-end-column="10" />
+        <state relative-caret-position="290">
+          <caret line="630" column="54" lean-forward="true" selection-start-line="630" selection-start-column="54" selection-end-line="630" selection-end-column="54" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />

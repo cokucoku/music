@@ -438,7 +438,7 @@
     <div class="list">
       <ul>
         <li v-for="(item,inx) in music" :class="{cur:inx==xh}" @click.stop="play(inx)">
-          <div class="name">{{item.name}}<img src="playing.gif" v-if="inx==xh&&play"></div>
+          <div class="name">{{item.name}}<img src="playing.gif" v-if="inx==xh"></div>
           <div class="authortime">
             <div class="author">{{item.author}}</div>
             <div class="time">{{formatTime(item.duration)}}</div>
@@ -499,10 +499,8 @@ new Vue({
     data: {
         player: new QMplayer(),
         musicList: [],//要播放的音乐数组，只是songid,这个是给this.player使用
-        lrcList: [],//要播放的音乐歌词文件地址
         lrcText: [],//当前歌曲对应的歌词
         lrcOkText: [],//当前歌曲对应的歌词,这个提供给卡拉OK用的，
-        klokList: [],//要播放的音乐卡拉ok歌词文件地址
         klokText: [],//当前歌曲对应的卡拉ok歌词
         scrollY: 0,//歌词滚动Y
         music: [], //存放播放列表,这个是有很多详细内容,数据拼接的,用于左侧musiclist
@@ -523,11 +521,28 @@ new Vue({
         }).then((data) => {
             data.list.forEach((el) => {
                 this.musicList.push(el.songId)
-                this.lrcList.push(el.lrc)
-                this.klokList.push(el.ok)
-                this.player.play(this.musicList, {index: 0})
             })
+            this.player.play(this.musicList, {index: 0})
+            setTimeout(() => {
+                let songs = this.player.data.songs
+                for (let i in songs) {
+                    let id=songs[i].id
+                   let fi=data.list.filter((el)=>{
+                        return el.songId==id
+                    })
+                    this.music.push({
+                        name: songs[i].name,
+                        author: songs[i].singer[0].name,
+                        duration: songs[i].interval,
+                        cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg',
+                        lrc:fi[0].lrc,
+                        ok:fi[0].ok,
+                    })
+                }
+            }, 400)
+
         })
+
         // 监听事件
         this.player.on("play", () => {
             this.xh = this.player.data.index//赋值当前歌曲的XH
@@ -626,22 +641,12 @@ new Vue({
             handler(value) {
                 //因为是异步数据，所以要延时
                 setTimeout(() => {
-                    //获取歌曲列表
-                    this.music = []
-                    let songs = this.player.data.songs
-                    for (let i in songs) {
-                        this.music.push({
-                            name: songs[i].name,
-                            author: songs[i].singer[0].name,
-                            duration: songs[i].interval,
-                            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg'
-                        })
-                    }
                     //获取当前歌曲对应歌词
                     this.lrcText = []
                     this.klokText = []
                     this.lrcOkText = []
-                    fetch('lrc/' + this.lrcList[value])
+
+                    fetch('lrc/' + this.music[value].lrc)
                         .then((response) => {
                             return response.text();
                         })
@@ -655,7 +660,7 @@ new Vue({
                                 this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
                             })
                         });
-                    fetch('lrc/' + this.klokList[value])
+                    fetch('lrc/' + this.music[value].ok)
                         .then((response) => {
                             return response.text();
                         })
@@ -671,7 +676,7 @@ new Vue({
                                 }
                             })
                         });
-                }, 4000)
+                }, 1000)
             }
         }
     },
@@ -710,7 +715,7 @@ new Vue({
             let fiii = klokText.filter((el) => {
                 let lastSec = this.toSec(el);
                 let diff = this.curtime;
-                return diff - lastSec >=0
+                return diff - lastSec >= 0
             })
             fiii.forEach((el) => {
                 this.$set(el, 'cur', true)
@@ -734,6 +739,7 @@ new Vue({
             return fen + ':' + yu
         },
         play(index) {
+            this.xh = index
             this.player.play(this.musicList, {index})
         },
         pause() {

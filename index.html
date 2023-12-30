@@ -473,8 +473,8 @@
       <div class="iconfont iconziyuan" @click="next"></div>
       <div class="musicinfo">
         <div class="info" v-if="music.length>0" v-cloak>
-          <div class="nameauthor">{{music[xh].name}} - {{music[xh].author}}</div>
-          <div class="time"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em></div>
+          <div class="nameauthor"  style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{music[xh].name}} - {{music[xh].author}}</div>
+          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em></div>
         </div>
         <div class="info" v-else v-cloak>
           <div class="nameauthor">-- - --</div>

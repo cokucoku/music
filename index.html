@@ -531,6 +531,7 @@ new Vue({
                         return el.songId==id
                     })
                     this.music.push({
+                        id:id,
                         name: songs[i].name,
                         author: songs[i].singer[0].name,
                         duration: songs[i].interval,
@@ -676,7 +677,7 @@ new Vue({
                                 }
                             })
                         });
-                }, 1000)
+                }, 3000)
             }
         }
     },
@@ -740,7 +741,7 @@ new Vue({
         },
         play(index) {
             this.xh = index
-            this.player.play(this.musicList, {index})
+            this.player.play(this.music, {index})
         },
         pause() {
             this.player.pause()

@@ -439,16 +439,16 @@
           :style="'--duration:'+item.duration+'s'">{{item.text}}</span>
     </div>
   </div>
-  <div class="bgmark" v-if="musicList.length>0" v-cloak></div>
-  <div class="bgimg" v-if="musicList.length>0" :style="'background-image:url('+musicList[xh].cover+')'" v-cloak></div>
-  <div class="musiclist" :class="{exp:exp}" v-if="musicList.length>0" v-cloak>
-    <div class="ti">播放列表<i>{{musicList.length}}首歌曲</i></div>
+  <div class="bgmark" v-if="music.length>0" v-cloak></div>
+  <div class="bgimg" v-if="music.length>0" :style="'background-image:url('+music[xh].cover+')'" v-cloak></div>
+  <div class="musiclist" :class="{exp:exp}" v-if="music.length>0" v-cloak>
+    <div class="ti">播放列表<i>{{music.length}}首歌曲</i></div>
     <div class="list">
       <ul>
-        <li v-for="(item,inx) in musicList" :class="{cur:inx==xh}" @click.stop="play(inx)">
-          <div class="name">{{item.songName}}<img src="playing.gif" v-if="inx==xh"></div>
+        <li v-for="(item,inx) in music" :class="{cur:inx==xh}" @click.stop="play(inx)">
+          <div class="name">{{item.name}}<img src="playing.gif" v-if="inx==xh"></div>
           <div class="authortime">
-            <div class="author">{{item.songAuto}}</div>
+            <div class="author">{{item.author}}</div>
             <div class="time">{{formatTime(item.duration)}}</div>
           </div>
         </li>
@@ -459,10 +459,10 @@
     <div class="mark" v-if="exp" @click="exp=false" v-cloak></div>
   </transition>
   <div class="music-top">
-    <div class="topn" v-if="musicList.length>0" v-cloak>
+    <div class="topn" v-if="music.length>0" v-cloak>
       <div class="cpj">
         <div class="cpjn" :style="thestyle">
-          <img id="pic" :src="musicList[xh].cover">
+          <img id="pic" :src="music[xh].cover">
         </div>
       </div>
       <div class="geci">
@@ -481,11 +481,11 @@
       <div class="iconfont iconstop" v-if="isPlay" @click="pause" v-cloak></div>
       <div class="iconfont iconziyuan" @click="next"></div>
       <div class="musicinfo">
-        <div class="info" v-if="musicList.length>0" v-cloak>
+        <div class="info" v-if="music.length>0" v-cloak>
           <div class="nameauthor" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
-            {{musicList[xh].songName}} - {{musicList[xh].songAuto}}
+            {{music[xh].name}} - {{music[xh].author}}
           </div>
-          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(musicList[xh].duration)}}</em>
+          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em>
           </div>
         </div>
         <div class="info" v-else v-cloak>
@@ -495,7 +495,7 @@
         <div id="jd" class="jd"></div>
       </div>
       <div class="iconfont icongeciweidianji" @click.stop="expGc=!expGc" :class="{cur:expGc}"></div>
-      <div id="icolist" class="iconfont icongedan" @click.stop="exp=!exp"><i>{{musicList.length}}</i></div>
+      <div id="icolist" class="iconfont icongedan" @click.stop="exp=!exp"><i>{{music.length}}</i></div>
       <div class="iconfont iconyinliang" @click="volume=0" v-if="volume!=0" v-cloak></div>
       <div style="color: #3eaf7c" class="iconfont iconjingyin" @click="volume=1" v-else v-cloak></div>
       <div id="volume"></div>
@@ -515,6 +515,7 @@ new Vue({
         lrcOkText: [],//当前歌曲对应的歌词,这个提供给卡拉OK用的，
         klokText: [],//当前歌曲对应的卡拉ok歌词
         scrollY: 0,//歌词滚动Y
+        music: [], //存放播放列表,这个是有很多详细内容,数据拼接的,用于左侧musiclist
         isPlay: false,
         xh: 0, //播放的音乐的序号
         curtime: 0, //播放當前時間
@@ -525,55 +526,26 @@ new Vue({
         expGc: false,//展开卡拉OK歌词
         volume: 1,
         isSlider: false,//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
+        //setss: '',//这个是一直获取this.player.data.songs的定时器
+        //songs: {}
     },
     mounted() {
-        fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/musicList').then((rs) => {
+        fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music').then((rs) => {
             return rs.json()
         }).then((data) => {
             this.musicList = data.list
             let musicList = []
             data.list.forEach((el) => {
-                musicList.push(el.songUrl)
+                musicList.push(el.songId)
             })
             this.player.play(musicList, {index: 0})
-            //获取当前歌曲对应歌词
-            fetch('lrc/' + this.musicList[0].lrc)
-                .then((response) => {
-                    return response.text();
-                })
-                .then((myJson) => {
-                    let line = myJson.split('\n');
-                    line.forEach((el, xh) => {
-                        let rs = el.split(']');
-                        if (rs[1] == undefined) {
-                            rs[1] = "";
-                        }
-                        this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
-                    })
-                });
-            fetch('lrc/' + this.musicList[0].ok)
-                .then((response) => {
-                    return response.text();
-                })
-                .then((myJson) => {
-                    let line = myJson.split('\n');
-                    line.forEach((el) => {
-                        let rs = el.split(']');
-                        if (rs[1] == undefined) {
-                            rs[1] = "";
-                        }
-                        if (rs[1]) {
-                            this.lrcOkText.push({btime: rs[0] + ']', text: el});
-                        }
-                    })
-                });
-
+            this.getSongs()
 
         })
 
         // 监听事件
         this.player.on("play", () => {
-            this.xh = this.player.data.index_old//赋值当前歌曲的XH
+            this.xh = this.player.data.index//赋值当前歌曲的XH
             this.isPlay = true
         })
         this.player.on("pause", () => {
@@ -596,10 +568,10 @@ new Vue({
                     }
                     if (string != 'end' && this.curtime > 0) {//意思是滑动中当前时间要变动
                         this.isSlider = true
-                        this.curtime = val * this.musicList[this.xh].duration / 100//
+                        this.curtime = val * this.music[this.xh].duration / 100//
                     }
                     if (string == 'end') {
-                        this.player.__.audio.currentTime = val * this.musicList[this.xh].duration / 100
+                        this.player.__.audio.currentTime = val * this.music[this.xh].duration / 100
                         this.progress()
                         this.isSlider = false
                         if (!this.isPlay) {
@@ -670,38 +642,39 @@ new Vue({
                 this.lrcText = []
                 this.klokText = []
                 this.lrcOkText = []
-                //获取当前歌曲对应歌词
-                fetch('lrc/' + this.musicList[value].lrc)
-                    .then((response) => {
-                        return response.text();
-                    })
-                    .then((myJson) => {
-                        let line = myJson.split('\n');
-                        line.forEach((el, xh) => {
-                            let rs = el.split(']');
-                            if (rs[1] == undefined) {
-                                rs[1] = "";
-                            }
-                            this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                if (this.music.length>0) {
+                    //获取当前歌曲对应歌词
+                    fetch('lrc/' + this.music[value].lrc)
+                        .then((response) => {
+                            return response.text();
                         })
-                    });
-                fetch('lrc/' + this.musicList[value].ok)
-                    .then((response) => {
-                        return response.text();
-                    })
-                    .then((myJson) => {
-                        let line = myJson.split('\n');
-                        line.forEach((el) => {
-                            let rs = el.split(']');
-                            if (rs[1] == undefined) {
-                                rs[1] = "";
-                            }
-                            if (rs[1]) {
-                                this.lrcOkText.push({btime: rs[0] + ']', text: el});
-                            }
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el, xh) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                            })
+                        });
+                    fetch('lrc/' + this.music[value].ok)
+                        .then((response) => {
+                            return response.text();
                         })
-                    });
-
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                if (rs[1]) {
+                                    this.lrcOkText.push({btime: rs[0] + ']', text: el});
+                                }
+                            })
+                        });
+                }
             }
         }
     },
@@ -715,6 +688,60 @@ new Vue({
         }
     },
     methods: {
+        getSongs() {
+            let setss = setInterval(() => {
+                let songs = this.player.data.songs
+                if (songs[0] != undefined) {
+                    for (let i in songs) {
+                        let id = songs[i].id
+                        let fi = this.musicList.filter((el) => {
+                            return el.songId == id
+                        })
+                        this.music.push({
+                            id: id,
+                            name: songs[i].name,
+                            author: songs[i].singer[0].name,
+                            duration: songs[i].interval,
+                            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg',
+                            lrc: fi[0].lrc,
+                            ok: fi[0].ok,
+                        })
+                    }
+                    //获取当前歌曲对应歌词
+                    fetch('lrc/' + this.music[0].lrc)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el, xh) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                            })
+                        });
+                    fetch('lrc/' + this.music[0].ok)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                if (rs[1]) {
+                                    this.lrcOkText.push({btime: rs[0] + ']', text: el});
+                                }
+                            })
+                        });
+                    clearInterval(setss)
+                }
+            }, 400)
+        },
         toklokText(el) {
             let klokText = []
             let myJson = el.text
@@ -765,11 +792,7 @@ new Vue({
         },
         play(index) {
             this.xh = index
-            let musicList = []
-            this.musicList.forEach((el) => {
-                musicList.push(el.songUrl)
-            })
-            this.player.play(musicList, {index: index})
+            this.player.play(this.music, {index})
         },
         pause() {
             this.player.pause()
@@ -789,7 +812,7 @@ new Vue({
         },
         progress() {
             this.setinter = setInterval(() => {
-                let pos = this.curtime / this.musicList[this.xh].duration * 100
+                let pos = this.curtime / this.music[this.xh].duration * 100
                 this.si1.go(pos)
                 //歌词处理
                 this.lrcText.forEach((el) => {

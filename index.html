@@ -97,6 +97,14 @@
     line-height: 42px;
   }
 
+  .geci .gc {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   .geci ul, .geci li {
     transition: all .5s
   }
@@ -461,6 +469,7 @@
         <ul :style="'transform:translateY('+scrollY+'px)'" v-if="lrcText.length>0">
           <li v-for="(item,xh) in lrcText" :key="xh" :class="{cur:item.cur}">{{item.text}}</li>
         </ul>
+        <div class="gc" v-else>歌词数据加载中...</div>
       </div>
     </div>
     <div class="loadding" v-else style="color: #fff;" v-cloak>歌曲数据加载中...</div>
@@ -473,8 +482,11 @@
       <div class="iconfont iconziyuan" @click="next"></div>
       <div class="musicinfo">
         <div class="info" v-if="music.length>0" v-cloak>
-          <div class="nameauthor"  style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{music[xh].name}} - {{music[xh].author}}</div>
-          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em></div>
+          <div class="nameauthor" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+            {{music[xh].name}} - {{music[xh].author}}
+          </div>
+          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em>
+          </div>
         </div>
         <div class="info" v-else v-cloak>
           <div class="nameauthor">-- - --</div>
@@ -498,7 +510,7 @@ new Vue({
     el: '.musicct',
     data: {
         player: new QMplayer(),
-        musicList: [],//要播放的音乐数组，只是songid,这个是给this.player使用
+        musicList: [],//API获取的列表
         lrcText: [],//当前歌曲对应的歌词
         lrcOkText: [],//当前歌曲对应的歌词,这个提供给卡拉OK用的，
         klokText: [],//当前歌曲对应的卡拉ok歌词
@@ -513,34 +525,21 @@ new Vue({
         exp: false,//展开歌曲列表
         expGc: false,//展开卡拉OK歌词
         volume: 1,
-        isSlider: false//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
+        isSlider: false,//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
+        //setss: '',//这个是一直获取this.player.data.songs的定时器
+        //songs: {}
     },
     mounted() {
         fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music').then((rs) => {
             return rs.json()
         }).then((data) => {
+            this.musicList = data.list
+            let musicList = []
             data.list.forEach((el) => {
-                this.musicList.push(el.songId)
+                musicList.push(el.songId)
             })
-            this.player.play(this.musicList, {index: 0})
-            setTimeout(() => {
-                let songs = this.player.data.songs
-                for (let i in songs) {
-                    let id=songs[i].id
-                   let fi=data.list.filter((el)=>{
-                        return el.songId==id
-                    })
-                    this.music.push({
-                        id:id,
-                        name: songs[i].name,
-                        author: songs[i].singer[0].name,
-                        duration: songs[i].interval,
-                        cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg',
-                        lrc:fi[0].lrc,
-                        ok:fi[0].ok,
-                    })
-                }
-            }, 400)
+            this.player.play(musicList, {index: 0})
+            this.getSongs()
 
         })
 
@@ -638,15 +637,13 @@ new Vue({
             }
         },
         xh: {
-            immediate: true,
+            immediate: false,
             handler(value) {
-                //因为是异步数据，所以要延时
-                setTimeout(() => {
+                this.lrcText = []
+                this.klokText = []
+                this.lrcOkText = []
+                if (this.music.length>0) {
                     //获取当前歌曲对应歌词
-                    this.lrcText = []
-                    this.klokText = []
-                    this.lrcOkText = []
-
                     fetch('lrc/' + this.music[value].lrc)
                         .then((response) => {
                             return response.text();
@@ -677,7 +674,7 @@ new Vue({
                                 }
                             })
                         });
-                }, 3000)
+                }
             }
         }
     },
@@ -691,6 +688,60 @@ new Vue({
         }
     },
     methods: {
+        getSongs() {
+            let setss = setInterval(() => {
+                let songs = this.player.data.songs
+                if (songs[0] != undefined) {
+                    for (let i in songs) {
+                        let id = songs[i].id
+                        let fi = this.musicList.filter((el) => {
+                            return el.songId == id
+                        })
+                        this.music.push({
+                            id: id,
+                            name: songs[i].name,
+                            author: songs[i].singer[0].name,
+                            duration: songs[i].interval,
+                            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg',
+                            lrc: fi[0].lrc,
+                            ok: fi[0].ok,
+                        })
+                    }
+                    //获取当前歌曲对应歌词
+                    fetch('lrc/' + this.music[0].lrc)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el, xh) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                            })
+                        });
+                    fetch('lrc/' + this.music[0].ok)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                if (rs[1]) {
+                                    this.lrcOkText.push({btime: rs[0] + ']', text: el});
+                                }
+                            })
+                        });
+                    clearInterval(setss)
+                }
+            }, 400)
+        },
         toklokText(el) {
             let klokText = []
             let myJson = el.text

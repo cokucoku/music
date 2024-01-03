@@ -19,11 +19,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="630" column="54" lean-forward="true" selection-start-line="630" selection-start-column="54" selection-end-line="630" selection-end-column="54" />
+            <state relative-caret-position="608">
+              <caret line="724" column="47" selection-start-line="724" selection-start-column="47" selection-end-line="724" selection-end-column="47" />
               <folding>
                 <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#8;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -34,33 +36,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cpj</find>
-      <find>progress</find>
-      <find>lrcList</find>
-      <find>drag</find>
-      <find>prev</find>
-      <find>playIndex</find>
-      <find>this.xh</find>
-      <find>27</find>
-      <find>46</find>
-      <find>formatTime</find>
-      <find>play</find>
-      <find>this.player()</find>
-      <find>80%</find>
-      <find>yinliang</find>
       <find>iconfont</find>
       <find>fi</find>
       <find>console</find>
       <find>klokText</find>
       <find>check</find>
-      <find>setinter</find>
       <find>klok</find>
-      <find>lrcText</find>
       <find>ani</find>
       <find>lrcOkText</find>
       <find>console.log</find>
-      <find>musicList</find>
+      <find>player</find>
+      <find>audio</find>
+      <find>xh</find>
+      <find>play(xh</find>
+      <find>this.player</find>
+      <find>this.lrcList</find>
+      <find>this.xh</find>
+      <find>play(</find>
+      <find>play</find>
       <find>music</find>
+      <find>lrcList</find>
+      <find>thestyle</find>
+      <find>isPlay</find>
+      <find>lrcText</find>
+      <find>cur</find>
+      <find>scrollY</find>
+      <find>curtime</find>
+      <find>si1</find>
+      <find>si2</find>
+      <find>setinter</find>
+      <find>musicList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,8 +75,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/slider.js" />
-        <option value="$PROJECT_DIR$/index - 副本.html" />
         <option value="$PROJECT_DIR$/index-歌词转场不突兀.html" />
+        <option value="$PROJECT_DIR$/index - 副本.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -143,17 +148,22 @@
       <workItem from="1676595201780" duration="26261000" />
       <workItem from="1676854528774" duration="1089000" />
       <workItem from="1690780218685" duration="1949000" />
+      <workItem from="1703903428783" duration="17316000" />
+      <workItem from="1704157668249" duration="5798000" />
+      <workItem from="1704164747963" duration="5801000" />
+      <workItem from="1704180175129" duration="6955000" />
+      <workItem from="1704246136137" duration="2255000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67554000" />
+    <option name="totallyTimeSpent" value="105679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17913593" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12802951" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -191,10 +201,20 @@
     <entry file="file://$PROJECT_DIR$/klok.html" />
     <entry file="file://$PROJECT_DIR$/index-歌词转场不突兀.html" />
     <entry file="file://$PROJECT_DIR$/index-2.html" />
+    <entry file="file://$PROJECT_DIR$/index_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index - 副本.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3078">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="-71">
+          <caret line="532" column="12" selection-start-line="532" selection-start-column="12" selection-end-line="532" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
@@ -203,11 +223,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="630" column="54" lean-forward="true" selection-start-line="630" selection-start-column="54" selection-end-line="630" selection-end-column="54" />
+        <state relative-caret-position="608">
+          <caret line="724" column="47" selection-start-line="724" selection-start-column="47" selection-end-line="724" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#8;n#div#0;n#div#5;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>

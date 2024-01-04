@@ -536,6 +536,7 @@ new Vue({
                 musicList.push(el.songUrl)
             })
             this.player.play(musicList, {index: 0})
+            console.log(this.player)
             //获取当前歌曲对应歌词
             fetch('lrc/' + this.musicList[0].lrc)
                 .then((response) => {

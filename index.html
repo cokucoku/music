@@ -15,6 +15,18 @@
     box-sizing: border-box;
   }
 
+  .authorIco {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    border-radius: 6px 0 0 6px;
+    padding: 5px 8px;
+    background: #3eaf7c;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+  }
+
   [v-cloak] {
     display: none;
   }
@@ -167,6 +179,51 @@
     transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
   }
 
+  .authorlist {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #444;
+    z-index: 6;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateY(-100%);
+    color: #eee
+  }
+
+  .authorlist.exp {
+    transform: translateX(0%);
+  }
+
+  .authorlist .ti {
+    border-bottom: solid 2px #555 !important;
+  }
+
+  .authorlist ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .authorlist ul li {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+  }
+
+  .authorlist ul li span {
+    border: solid 1px #fff;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+  }
+  .authorlist ul li.cur span {
+    background: #3eaf7c;
+    color: #fff;border: solid 1px #3eaf7c;
+  }
+
   .musiclist {
     position: fixed;
     width: 300px;
@@ -179,6 +236,7 @@
     transform: translateX(-100%);
     color: #eee
   }
+
 
   .musiclist .list {
     height: calc(100vh - 62px);
@@ -215,13 +273,13 @@
     transform: translateX(0%);
   }
 
-  .musiclist .ti {
+  .musiclist .ti, .authorlist .ti {
     padding: 20px 20px;
     color: #3eaf7c;
     border-bottom: solid 1px #444;
   }
 
-  .musiclist .ti i {
+  .musiclist .ti i, .authorlist .ti i {
     font-size: 12px;
     font-style: normal;
     margin-left: 4px;
@@ -455,8 +513,14 @@
       </ul>
     </div>
   </div>
+  <div class="authorlist" :class="{exp:expGs}" v-if="authorList.length>0" v-cloak>
+    <div class="ti">歌手列表<i>{{authorList.length}}个歌手</i></div>
+    <ul>
+      <li v-for="(item,inx) in authorList"  @click.stop="change(item)"><span>{{item}}</span></li>
+    </ul>
+  </div>
   <transition name="myu">
-    <div class="mark" v-if="exp" @click="exp=false" v-cloak></div>
+    <div class="mark" v-if="exp||expGs" @click="exp=false,expGs=false" v-cloak></div>
   </transition>
   <div class="music-top">
     <div class="topn" v-if="musicList.length>0" v-cloak>
@@ -485,7 +549,7 @@
           <div class="nameauthor" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
             {{musicList[xh].songName}} - {{musicList[xh].songAuto}}
           </div>
-          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(duration)}}</em>
+          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(musicList[xh].duration)}}</em>
           </div>
         </div>
         <div class="info" v-else v-cloak>
@@ -501,6 +565,7 @@
       <div id="volume"></div>
     </div>
   </div>
+  <div class="authorIco" @click.stop="expGs=!expGs">歌手</div>
 </div>
 <script src="vue.min.js"></script>
 <script src="slider.js"></script>
@@ -511,20 +576,22 @@ new Vue({
     data: {
         player: new QMplayer(),
         musicList: [],//API获取的列表
+        authorList: [],
         lrcText: [],//当前歌曲对应的歌词
         lrcOkText: [],//当前歌曲对应的歌词,这个提供给卡拉OK用的，
         klokText: [],//当前歌曲对应的卡拉ok歌词
         scrollY: 0,//歌词滚动Y
         isPlay: false,
         xh: 0, //播放的音乐的序号
+        author:'',//选择歌手
         curtime: 0, //播放當前時間
-        duration:0,
         setinter: '', //保存定時器名稱
         si1: '',//进度条
         si2: '',//音量对象
         exp: false,//展开歌曲列表
+        expGs: false,//展开歌手列表
         expGc: false,//展开卡拉OK歌词
-        volume: 1,
+        volume: 0,
         isSlider: false,//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
     },
     mounted() {
@@ -533,13 +600,13 @@ new Vue({
         }).then((data) => {
             this.musicList = data.list
             let musicList = []
+            let authorList = []
             data.list.forEach((el) => {
                 musicList.push(el.songUrl)
+                authorList.push(el.songAuto)
             })
+            this.authorList = Array.from(new Set(authorList))
             this.player.play(musicList, {index: 0})
-            setTimeout(()=>{
-                this.duration=this.player.data.duration
-            },100)
             //获取当前歌曲对应歌词
             fetch('lrc/' + this.musicList[0].lrc)
                 .then((response) => {
@@ -603,7 +670,7 @@ new Vue({
                         this.curtime = val * this.musicList[this.xh].duration / 100//
                     }
                     if (string == 'end') {
-                        this.player.__.audio.currentTime = val * this.musicList[this.xh].duration / 100
+                        this.player.currentTime = val * this.musicList[this.xh].duration / 100
                         this.progress()
                         this.isSlider = false
                         if (!this.isPlay) {
@@ -674,7 +741,6 @@ new Vue({
                 this.lrcText = []
                 this.klokText = []
                 this.lrcOkText = []
-                this.duration=this.player.data.duration
                 //获取当前歌曲对应歌词
                 fetch('lrc/' + this.musicList[value].lrc)
                     .then((response) => {
@@ -767,6 +833,23 @@ new Vue({
                 yu = yu
             }
             return fen + ':' + yu
+        },
+        change(item){
+            this.expGs=false
+            let fi=this.musicList.filter((el)=>{
+                return el.songAuto===item
+            })
+            this.xh=-1
+            this.musicList=fi
+            let musicList = []
+            this.musicList.forEach((el) => {
+                musicList.push(el.songUrl)
+            })
+            this.player.play(musicList, {index: 0})
+            setTimeout(()=>{
+               this.xh=0
+            },100)
+
         },
         play(index) {
             this.xh = index

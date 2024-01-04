@@ -485,7 +485,7 @@
           <div class="nameauthor" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
             {{musicList[xh].songName}} - {{musicList[xh].songAuto}}
           </div>
-          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(musicList[xh].duration)}}</em>
+          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(duration)}}</em>
           </div>
         </div>
         <div class="info" v-else v-cloak>
@@ -518,6 +518,7 @@ new Vue({
         isPlay: false,
         xh: 0, //播放的音乐的序号
         curtime: 0, //播放當前時間
+        duration:0,
         setinter: '', //保存定時器名稱
         si1: '',//进度条
         si2: '',//音量对象
@@ -536,7 +537,9 @@ new Vue({
                 musicList.push(el.songUrl)
             })
             this.player.play(musicList, {index: 0})
-            console.log(this.player)
+            setTimeout(()=>{
+                this.duration=this.player.data.duration
+            },100)
             //获取当前歌曲对应歌词
             fetch('lrc/' + this.musicList[0].lrc)
                 .then((response) => {
@@ -574,7 +577,7 @@ new Vue({
 
         // 监听事件
         this.player.on("play", () => {
-            this.xh = this.player.data.index_old//赋值当前歌曲的XH
+            this.xh = this.player.data.index//赋值当前歌曲的XH
             this.isPlay = true
         })
         this.player.on("pause", () => {
@@ -671,6 +674,7 @@ new Vue({
                 this.lrcText = []
                 this.klokText = []
                 this.lrcOkText = []
+                this.duration=this.player.data.duration
                 //获取当前歌曲对应歌词
                 fetch('lrc/' + this.musicList[value].lrc)
                     .then((response) => {

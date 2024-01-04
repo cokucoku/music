@@ -1,7 +1,7 @@
 {
     list: [
         {
-            songUrl: 'lrc/01-hgs.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/01-hgs.mp3',
             songName: '胡广生',
             songAuto: '任素夕',
             duration: 215,
@@ -10,7 +10,7 @@
             ok: '01-hgs-ok.lrc'
         },
         {
-            songUrl: 'lrc/02-mq.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/02-mq.mp3',
             songName: '麻雀',
             songAuto: '李荣浩',
             duration: 252,
@@ -19,7 +19,7 @@
             ok: '02-mq-ok.lrc'
         },
         {
-            songUrl: 'lrc/03-lzy.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/03-lzy.mp3',
             songName: '庐州月',
             songAuto: '许嵩',
             duration: 255,
@@ -28,7 +28,7 @@
             ok: '03-lzy-ok.lrc'
         },
         {
-            songUrl: 'lrc/04-gl.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/04-gl.mp3',
             songName: '光亮',
             songAuto: '周深',
             duration: 288,
@@ -37,16 +37,16 @@
             ok: '04-gl-ok.lrc'
         },
         {
-            songUrl: 'lrc/05-xhn.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/05-xhn.mp3',
             songName: '喜欢你',
             songAuto: 'beyond',
             duration: 276,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001oHxZZ1pAQn4_2.jpg',
             lrc: '05-xhn.lrc',
             ok: '05-xhn-ok.lrc'
         },
         {
-            songUrl: 'lrc/06-kdzyddf.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/06-kdzyddf.mp3',
             songName: '看得最远的地方',
             songAuto: '毛不易',
             duration: 252,
@@ -55,7 +55,7 @@
             ok: '06-kdzyddf-ok.lrc'
         },
         {
-            songUrl: 'lrc/07-zypf.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/07-zypf.mp3',
             songName: '只要平凡',
             songAuto: '张杰&张碧晨',
             duration: 246,
@@ -64,7 +64,7 @@
             ok: '07-zypf-ok.lrc'
         },
         {
-            songUrl: 'lrc/08-hnyy.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/08-hnyy.mp3',
             songName: '和你一样',
             songAuto: '李宇春',
             duration: 307,
@@ -73,7 +73,7 @@
             ok: '08-hnyy-ok.lrc'
         },
         {
-            songUrl: 'lrc/09-lxl.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/09-lxl.mp3',
             songName: '李香兰',
             songAuto: '张学友',
             duration: 396,
@@ -82,7 +82,7 @@
             ok: '09-lxl-ok.lrc'
         },
         {
-            songUrl: 'lrc/10-bysh.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/10-bysh.m4a',
             songName: '不要说话',
             songAuto: '陈奕迅',
             duration: 288,
@@ -91,7 +91,7 @@
             ok: '10-bysh-ok.lrc'
         },
         {
-            songUrl: 'lrc/11-wack.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/11-wack.mp3',
             songName: '为爱痴狂',
             songAuto: '金志文',
             duration: 142,
@@ -100,7 +100,7 @@
             ok: '11-wack-ok.lrc'
         },
         {
-            songUrl: 'lrc/12-mtnh.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/12-mtnh.mp3',
             songName: '明天，你好',
             songAuto: '牛奶咖啡',
             duration: 271,
@@ -109,16 +109,16 @@
             ok: '12-mtnh-ok.lrc'
         },
         {
-            songUrl: 'lrc/13-bjdt.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/13-bjdt.mp3',
             songName: '北京的天',
             songAuto: '青蛙乐队',
-            duration: 242,
+            duration: 243,
             cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001LoSxh2S5pcs_2.jpg',
             lrc: '13-bjdt.lrc',
             ok: '13-bjdt-ok.lrc'
         },
         {
-            songUrl: 'lrc/14-xaddf.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/14-xaddf.mp3',
             songName: '相爱的地方',
             songAuto: '青蛙乐队',
             duration: 234,
@@ -127,7 +127,7 @@
             ok: '14-xaddf-ok.lrc'
         },
         {
-            songUrl: 'lrc/15-mhwgo.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/15-mhwgo.mp3',
             songName: 'My Heart Will Go On',
             songAuto: '席琳·迪翁',
             duration: 300,
@@ -136,25 +136,25 @@
             ok: '15-mhwgo-ok.lrc'
         },
         {
-            songUrl: 'lrc/16-mybd.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/16-mybd.mp3',
             songName: 'Move Your Body',
             songAuto: 'Sia/Alan Walker',
             duration: 217,
-            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000018t4rj3Okmqv_1.jpg?max_age=2592000',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000018t4rj3Okmqv_1.jpg',
             lrc: '16-mybd.lrc',
             ok: '16-mybd-ok.lrc'
         },
         {
-            songUrl: 'lrc/17-rh.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/17-rh.mp3',
             songName: '绒花',
             songAuto: '韩红',
             duration: 267,
-            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003XG0Tv0T0PNB_1.jpg?max_age=2592000',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003XG0Tv0T0PNB_1.jpg',
             lrc: '17-rh.lrc',
             ok: '17-rh-ok.lrc'
         },
         {
-            songUrl: 'lrc/18-je.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/18-je.mp3',
             songName: '九儿',
             songAuto: '韩红',
             duration: 152,
@@ -163,7 +163,7 @@
             ok: '18-je-ok.lrc'
         },
         {
-            songUrl: 'lrc/19-kdqr.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/19-kdqr.ogg',
             songName: '口袋情人',
             songAuto: 'sky',
             duration: 208,
@@ -172,16 +172,16 @@
             ok: '19-kdqr-ok.lrc'
         },
         {
-            songUrl: 'lrc/20-qfl.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/20-qfl.mp3',
             songName: '起风了',
             songAuto: '周深',
-            duration: 211,
+            duration: 311,
             cover: 'https://img1.kuwo.cn/star/albumcover/300/99/76/1363479957.jpg',
             lrc: '20-qfl.lrc',
             ok: '20-qfl-ok.lrc'
         },
         {
-            songUrl: 'lrc/21-bhl.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/21-bhl.mp3',
             songName: '白桦林',
             songAuto: '朴树',
             duration: 227,
@@ -190,7 +190,7 @@
             ok: '21-bhl-ok.lrc'
         },
         {
-            songUrl: 'lrc/22-ycsl.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/22-ycsl.mp3',
             songName: '一程山路',
             songAuto: '毛不易',
             duration: 197,
@@ -199,16 +199,16 @@
             ok: '22-ycsl-ok.lrc'
         },
         {
-            songUrl: 'lrc/23-cd.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/23-cd.mp3',
             songName: '成都',
             songAuto: '赵雷',
             duration: 328,
-            cover: 'https://ri-sycdn.kuwo.cn/c7915422b22c9872b417a267f6b450f7/65952788/resource/n2/85/55/2390481509.mp3',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003ltiMR4RSrgo_1.jpg',
             lrc: '23-cd.lrc',
             ok: '23-cd-ok.lrc'
         },
         {
-            songUrl: 'lrc/24-lgh.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/24-lgh.mp3',
             songName: '泸沽湖',
             songAuto: '麻园诗人',
             duration: 246,

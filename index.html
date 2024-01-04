@@ -214,14 +214,16 @@
   }
 
   .authorlist ul li span {
-    border: solid 1px #fff;
+    border: solid 1px #666;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
   }
+
   .authorlist ul li.cur span {
     background: #3eaf7c;
-    color: #fff;border: solid 1px #3eaf7c;
+    color: #fff;
+    border: solid 1px #3eaf7c;
   }
 
   .musiclist {
@@ -430,6 +432,10 @@
   }
 
   @media (max-width: 768px) {
+    .authorlist ul li {
+      width: 33.33%;
+    }
+
     .iconfont {
       font-size: 14px;
     }
@@ -516,7 +522,7 @@
   <div class="authorlist" :class="{exp:expGs}" v-if="authorList.length>0" v-cloak>
     <div class="ti">歌手列表<i>{{authorList.length}}个歌手</i></div>
     <ul>
-      <li v-for="(item,inx) in authorList"  @click.stop="change(item)"><span>{{item}}</span></li>
+      <li v-for="(item,inx) in authorList" @click.stop="change(item)"><span>{{item}}</span></li>
     </ul>
   </div>
   <transition name="myu">
@@ -575,7 +581,8 @@ new Vue({
     el: '.musicct',
     data: {
         player: new QMplayer(),
-        musicList: [],//API获取的列表
+        allMusicList: [],//API获取的列表
+        musicList: [],//API获取的列表，有歌手筛选过
         authorList: [],
         lrcText: [],//当前歌曲对应的歌词
         lrcOkText: [],//当前歌曲对应的歌词,这个提供给卡拉OK用的，
@@ -583,7 +590,7 @@ new Vue({
         scrollY: 0,//歌词滚动Y
         isPlay: false,
         xh: 0, //播放的音乐的序号
-        author:'',//选择歌手
+        author: '',//选择歌手
         curtime: 0, //播放當前時間
         setinter: '', //保存定時器名稱
         si1: '',//进度条
@@ -599,6 +606,7 @@ new Vue({
             return rs.json()
         }).then((data) => {
             this.musicList = data.list
+            this.allMusicList = data.list
             let musicList = []
             let authorList = []
             data.list.forEach((el) => {
@@ -834,21 +842,52 @@ new Vue({
             }
             return fen + ':' + yu
         },
-        change(item){
-            this.expGs=false
-            let fi=this.musicList.filter((el)=>{
-                return el.songAuto===item
+        change(item) {
+            this.expGs = false
+            let fi = this.allMusicList.filter((el) => {
+                return el.songAuto === item
             })
-            this.xh=-1
-            this.musicList=fi
+            this.xh = 0
+            this.musicList = fi
             let musicList = []
             this.musicList.forEach((el) => {
                 musicList.push(el.songUrl)
             })
             this.player.play(musicList, {index: 0})
-            setTimeout(()=>{
-               this.xh=0
-            },100)
+            this.lrcText = []
+            this.klokText = []
+            this.lrcOkText = []
+            //获取当前歌曲对应歌词
+            fetch('lrc/' + this.musicList[0].lrc)
+                .then((response) => {
+                    return response.text();
+                })
+                .then((myJson) => {
+                    let line = myJson.split('\n');
+                    line.forEach((el, xh) => {
+                        let rs = el.split(']');
+                        if (rs[1] == undefined) {
+                            rs[1] = "";
+                        }
+                        this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                    })
+                });
+            fetch('lrc/' + this.musicList[0].ok)
+                .then((response) => {
+                    return response.text();
+                })
+                .then((myJson) => {
+                    let line = myJson.split('\n');
+                    line.forEach((el) => {
+                        let rs = el.split(']');
+                        if (rs[1] == undefined) {
+                            rs[1] = "";
+                        }
+                        if (rs[1]) {
+                            this.lrcOkText.push({btime: rs[0] + ']', text: el});
+                        }
+                    })
+                });
 
         },
         play(index) {

@@ -145,7 +145,7 @@
             ok: '16-mybd-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao82.com/lrc/17-rh.mp3',
+            songUrl: 'https://music.leeao82.com/lrc/17-rh.m4a',
             songName: '绒花',
             songAuto: '韩红',
             duration: 267,

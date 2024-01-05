@@ -315,5 +315,147 @@
             lrc: 'zbc-ll.lrc',
             ok: 'zbc-ll-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-bznl.m4a',
+            songName: '别再闹了',
+            songAuto: '毛不易',
+            duration: 227,
+            cover: '',
+            lrc: 'mby-bznl.lrc',
+            ok: 'mby-bznl-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-br.mp3',
+            songName: '不染',
+            songAuto: '毛不易',
+            duration: 325,
+            cover: '',
+            lrc: 'mby-br.lrc',
+            ok: 'mby-br-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-dbmy.mp3',
+            songName: '东北民谣',
+            songAuto: '毛不易',
+            duration: 279,
+            cover: '',
+            lrc: 'mby-dbmy.lrc',
+            ok: 'mby-dbmy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-gngw.m4a',
+            songName: '给你给我',
+            songAuto: '毛不易',
+            duration: 241,
+            cover: '',
+            lrc: 'mby-gngw.lrc',
+            ok: 'mby-gngw-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-hmhek.mp3',
+            songName: '红莓花儿开',
+            songAuto: '毛不易',
+            duration: 262,
+            cover: '',
+            lrc: 'mby-hmhek.lrc',
+            ok: 'mby-hmhek-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-wmdr.mp3',
+            songName: '无名的人',
+            songAuto: '毛不易',
+            duration: 282,
+            cover: '',
+            lrc: 'mby-wmdr.lrc',
+            ok: 'mby-wmdr-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-yy.mp3',
+            songName: '呓语',
+            songAuto: '毛不易',
+            duration: 271,
+            cover: '',
+            lrc: 'mby-yy.lrc',
+            ok: 'mby-yy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-jie.m4a',
+            songName: '借',
+            songAuto: '毛不易',
+            duration: 243,
+            cover: '',
+            lrc: 'mby-jie.lrc',
+            ok: 'mby-jie-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-pfdyt.m4a',
+            songName: '平凡的一天',
+            songAuto: '毛不易',
+            duration: 276,
+            cover: '',
+            lrc: 'mby-pfdyt.lrc',
+            ok: 'mby-pfdyt-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-rgyyt.m4a',
+            songName: '如果有一天我变得很有钱',
+            songAuto: '毛不易',
+            duration: 170,
+            cover: '',
+            lrc: 'mby-rgyyt.lrc',
+            ok: 'mby-rgyyt-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-rh.m4a',
+            songName: '入海',
+            songAuto: '毛不易',
+            duration: 249,
+            cover: '',
+            lrc: 'mby-rh.lrc',
+            ok: 'mby-rh-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-sx.m4a',
+            songName: '盛夏',
+            songAuto: '毛不易',
+            duration: 274,
+            cover: '',
+            lrc: 'mby-sx.lrc',
+            ok: 'mby-sx-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-ww.m4a',
+            songName: '无问',
+            songAuto: '毛不易',
+            duration: 258,
+            cover: '',
+            lrc: 'mby-ww.lrc',
+            ok: 'mby-ww-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/mby-xwzydr.m4a',
+            songName: '像我这样的人',
+            songAuto: '毛不易',
+            duration: 207,
+            cover: '',
+            lrc: 'mby-xwzydr.lrc',
+            ok: 'mby-xwzydr-ok.lrc'
+        },{
+            songUrl: 'https://music.leeao82.com/lrc/mby-xc.m4a',
+            songName: '消愁',
+            songAuto: '毛不易',
+            duration: 261,
+            cover: '',
+            lrc: 'mby-xc.lrc',
+            ok: 'mby-xc-ok.lrc'
+        },{
+            songUrl: 'https://music.leeao82.com/lrc/mby-yhys.m4a',
+            songName: '一荤一素',
+            songAuto: '毛不易',
+            duration: 281,
+            cover: '',
+            lrc: 'mby-yhys.lrc',
+            ok: 'mby-yhys-ok.lrc'
+        },
     ]
 }

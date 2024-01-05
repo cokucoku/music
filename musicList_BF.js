@@ -216,6 +216,51 @@
             lrc: '24-lgh.lrc',
             ok: '24-lgh-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zjl-yfzm.mp3',
+            songName: '以父之名',
+            songAuto: '周杰伦',
+            duration: 342,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000MkMni19ClKG_4.jpg?max_age=2592000',
+            lrc: 'zjl-yfzm.lrc',
+            ok: 'zjl-yfzm-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zjl-bcgm.mp3',
+            songName: '本草纲目',
+            songAuto: '周杰伦',
+            duration: 210,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002jLGWe16Tf1H_1.jpg?max_age=2592000',
+            lrc: 'zjl-bcgm.lrc',
+            ok: 'zjl-bcgm-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zjl-ltx.mp3',
+            songName: '兰亭序',
+            songAuto: '周杰伦',
+            duration: 254,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002Neh8l0uciQZ_1.jpg?max_age=2592000',
+            lrc: 'zjl-ltx.lrc',
+            ok: 'zjl-ltx-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zjl-qhc.mp3',
+            songName: '青花瓷',
+            songAuto: '周杰伦',
+            duration: 254,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002eFUFm2XYZ7z_2.jpg?max_age=2592000',
+            lrc: 'zjl-qhc.lrc',
+            ok: 'zjl-qhc-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zjl-yq.mp3',
+            songName: '夜曲',
+            songAuto: '周杰伦',
+            duration: 254,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_3.jpg?max_age=2592000',
+            lrc: 'zjl-yq.lrc',
+            ok: 'zjl-yq-ok.lrc'
+        },
 
     ]
 }

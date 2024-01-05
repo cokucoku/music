@@ -200,6 +200,26 @@
     border-bottom: solid 2px #555 !important;
   }
 
+  .authorlist .close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: solid 2px #555;
+    padding: 10px;
+  }
+
+  .authorlist .close span {
+    background: #3eaf7c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 18px;
+    cursor: pointer;
+  }
+
+  .authorlist .list {
+    height: calc(100% - 126px);
+  }
+
   .authorlist ul {
     display: flex;
     flex-wrap: wrap;
@@ -220,7 +240,7 @@
     cursor: pointer;
   }
 
-  .authorlist ul li.cur span {
+  .authorlist ul li:hover span {
     background: #3eaf7c;
     color: #fff;
     border: solid 1px #3eaf7c;
@@ -521,9 +541,13 @@
   </div>
   <div class="authorlist" :class="{exp:expGs}" v-if="authorList.length>0" v-cloak>
     <div class="ti">歌手列表<i>{{authorList.length}}个歌手</i></div>
-    <ul>
-      <li v-for="(item,inx) in authorList" @click.stop="change(item)"><span>{{item}}</span></li>
-    </ul>
+    <div class="list">
+      <ul>
+        <li @click.stop="getAll"><span>全部</span></li>
+        <li v-for="(item,inx) in authorList" @click.stop="change(item)"><span>{{item}}</span></li>
+      </ul>
+    </div>
+    <div class="close" @click="expGs=false"><span>关闭</span></div>
   </div>
   <transition name="myu">
     <div class="mark" v-if="exp||expGs" @click="exp=false,expGs=false" v-cloak></div>
@@ -605,48 +629,14 @@ new Vue({
         fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/musicList').then((rs) => {
             return rs.json()
         }).then((data) => {
-            this.musicList = data.list
             this.allMusicList = data.list
-            let musicList = []
+            this.musicList = data.list
+            this.initPlay()
             let authorList = []
             data.list.forEach((el) => {
-                musicList.push(el.songUrl)
                 authorList.push(el.songAuto)
             })
             this.authorList = Array.from(new Set(authorList))
-            this.player.play(musicList, {index: 0})
-            //获取当前歌曲对应歌词
-            fetch('lrc/' + this.musicList[0].lrc)
-                .then((response) => {
-                    return response.text();
-                })
-                .then((myJson) => {
-                    let line = myJson.split('\n');
-                    line.forEach((el, xh) => {
-                        let rs = el.split(']');
-                        if (rs[1] == undefined) {
-                            rs[1] = "";
-                        }
-                        this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
-                    })
-                });
-            fetch('lrc/' + this.musicList[0].ok)
-                .then((response) => {
-                    return response.text();
-                })
-                .then((myJson) => {
-                    let line = myJson.split('\n');
-                    line.forEach((el) => {
-                        let rs = el.split(']');
-                        if (rs[1] == undefined) {
-                            rs[1] = "";
-                        }
-                        if (rs[1]) {
-                            this.lrcOkText.push({btime: rs[0] + ']', text: el});
-                        }
-                    })
-                });
-
 
         })
 
@@ -842,13 +832,7 @@ new Vue({
             }
             return fen + ':' + yu
         },
-        change(item) {
-            this.expGs = false
-            let fi = this.allMusicList.filter((el) => {
-                return el.songAuto === item
-            })
-            this.xh = 0
-            this.musicList = fi
+        initPlay() {//首次播放，不管是歌手选择切换，还是第一次加载全部歌曲列表
             let musicList = []
             this.musicList.forEach((el) => {
                 musicList.push(el.songUrl)
@@ -888,7 +872,21 @@ new Vue({
                         }
                     })
                 });
-
+        },
+        getAll() {
+            this.expGs = false
+            this.xh = 0
+            this.musicList = this.allMusicList
+            this.initPlay()
+        },
+        change(item) {
+            this.expGs = false
+            let fi = this.allMusicList.filter((el) => {
+                return el.songAuto === item
+            })
+            this.xh = 0
+            this.musicList = fi
+            this.initPlay()
         },
         play(index) {
             this.xh = index

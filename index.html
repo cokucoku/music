@@ -218,6 +218,7 @@
 
   .authorlist .list {
     height: calc(100% - 126px);
+    overflow: auto;
   }
 
   .authorlist ul {
@@ -238,6 +239,7 @@
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
+    text-align: center;
   }
 
   .authorlist ul li:hover span {
@@ -638,6 +640,13 @@ new Vue({
             })
             this.authorList = Array.from(new Set(authorList))
 
+        })
+        //按键
+        document.addEventListener('keyup',(e)=>{
+            if(e.code==='Space'){
+                this.player.toggle()
+
+            }
         })
 
         // 监听事件

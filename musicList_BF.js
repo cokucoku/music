@@ -320,7 +320,7 @@
             songName: '别再闹了',
             songAuto: '毛不易',
             duration: 227,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000DPVOS47frP1_1.jpg?max_age=2592000',
             lrc: 'mby-bznl.lrc',
             ok: 'mby-bznl-ok.lrc'
         },
@@ -329,7 +329,7 @@
             songName: '不染',
             songAuto: '毛不易',
             duration: 325,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000001mchg2xCFKz_2.jpg?max_age=2592000',
             lrc: 'mby-br.lrc',
             ok: 'mby-br-ok.lrc'
         },
@@ -338,7 +338,7 @@
             songName: '东北民谣',
             songAuto: '毛不易',
             duration: 279,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001tziml1JlE88_1.jpg?max_age=2592000',
             lrc: 'mby-dbmy.lrc',
             ok: 'mby-dbmy-ok.lrc'
         },
@@ -347,7 +347,7 @@
             songName: '给你给我',
             songAuto: '毛不易',
             duration: 241,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T001R150x150M000001BHDR33FZVZ0.jpg?max_age=2592000',
             lrc: 'mby-gngw.lrc',
             ok: 'mby-gngw-ok.lrc'
         },
@@ -356,7 +356,7 @@
             songName: '红莓花儿开',
             songAuto: '毛不易',
             duration: 262,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000V6zJe0c0IZw_1.jpg?max_age=2592000',
             lrc: 'mby-hmhek.lrc',
             ok: 'mby-hmhek-ok.lrc'
         },
@@ -365,7 +365,7 @@
             songName: '无名的人',
             songAuto: '毛不易',
             duration: 282,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002mPgSG01LLtu_1.jpg?max_age=2592000',
             lrc: 'mby-wmdr.lrc',
             ok: 'mby-wmdr-ok.lrc'
         },
@@ -374,7 +374,7 @@
             songName: '呓语',
             songAuto: '毛不易',
             duration: 271,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001OFJ154OfZuW_6.jpg?max_age=2592000',
             lrc: 'mby-yy.lrc',
             ok: 'mby-yy-ok.lrc'
         },
@@ -383,7 +383,7 @@
             songName: '借',
             songAuto: '毛不易',
             duration: 243,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002iBxBy3bAmCx_3.jpg?max_age=2592000',
             lrc: 'mby-jie.lrc',
             ok: 'mby-jie-ok.lrc'
         },
@@ -392,7 +392,7 @@
             songName: '平凡的一天',
             songAuto: '毛不易',
             duration: 276,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003j9ta912S5XX_1.jpg?max_age=2592000',
             lrc: 'mby-pfdyt.lrc',
             ok: 'mby-pfdyt-ok.lrc'
         },
@@ -401,7 +401,7 @@
             songName: '如果有一天我变得很有钱',
             songAuto: '毛不易',
             duration: 170,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002AYtB5468qEQ_2.jpg?max_age=2592000',
             lrc: 'mby-rgyyt.lrc',
             ok: 'mby-rgyyt-ok.lrc'
         },
@@ -410,7 +410,7 @@
             songName: '入海',
             songAuto: '毛不易',
             duration: 249,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000001j7mG1FzTo9_1.jpg?max_age=2592000',
             lrc: 'mby-rh.lrc',
             ok: 'mby-rh-ok.lrc'
         },
@@ -419,7 +419,7 @@
             songName: '盛夏',
             songAuto: '毛不易',
             duration: 274,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002YpJrS1ussoD_3.jpg?max_age=2592000',
             lrc: 'mby-sx.lrc',
             ok: 'mby-sx-ok.lrc'
         },
@@ -428,7 +428,7 @@
             songName: '无问',
             songAuto: '毛不易',
             duration: 258,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000026ttFc17IeE3_1.jpg?max_age=2592000',
             lrc: 'mby-ww.lrc',
             ok: 'mby-ww-ok.lrc'
         },
@@ -437,7 +437,7 @@
             songName: '像我这样的人',
             songAuto: '毛不易',
             duration: 207,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000001n7a82gh6IY_2.jpg?max_age=2592000',
             lrc: 'mby-xwzydr.lrc',
             ok: 'mby-xwzydr-ok.lrc'
         },{
@@ -445,7 +445,7 @@
             songName: '消愁',
             songAuto: '毛不易',
             duration: 261,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002xoonH2Bk7FR_2.jpg?max_age=2592000',
             lrc: 'mby-xc.lrc',
             ok: 'mby-xc-ok.lrc'
         },{
@@ -453,7 +453,7 @@
             songName: '一荤一素',
             songAuto: '毛不易',
             duration: 281,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002VxplL2gXAuH_4.jpg?max_age=2592000',
             lrc: 'mby-yhys.lrc',
             ok: 'mby-yhys-ok.lrc'
         },

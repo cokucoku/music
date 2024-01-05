@@ -247,7 +247,7 @@
             songUrl: 'https://music.leeao82.com/lrc/zjl-qhc.mp3',
             songName: '青花瓷',
             songAuto: '周杰伦',
-            duration: 254,
+            duration: 237,
             cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002eFUFm2XYZ7z_2.jpg?max_age=2592000',
             lrc: 'zjl-qhc.lrc',
             ok: 'zjl-qhc-ok.lrc'
@@ -256,11 +256,64 @@
             songUrl: 'https://music.leeao82.com/lrc/zjl-yq.mp3',
             songName: '夜曲',
             songAuto: '周杰伦',
-            duration: 254,
+            duration: 226,
             cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000024bjiL2aocxT_3.jpg?max_age=2592000',
             lrc: 'zjl-yq.lrc',
             ok: 'zjl-yq-ok.lrc'
         },
-
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zbc-nl.mp3',
+            songName: '年轮',
+            songAuto: '张碧晨',
+            duration: 273,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000044dYsD2Y0lfN_1.jpg?max_age=2592000',
+            lrc: 'zbc-nl.lrc',
+            ok: 'zbc-nl-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zbc-long.mp3',
+            songName: '笼',
+            songAuto: '张碧晨',
+            duration: 300,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002XBCf92YhyqT_1.jpg?max_age=2592000',
+            lrc: 'zbc-long.lrc',
+            ok: 'zbc-long-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zbc-gdfx.mp3',
+            songName: '光的方向',
+            songAuto: '张碧晨',
+            duration: 183,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000004BVn1D1Na3jw_1.jpg?max_age=2592000',
+            lrc: 'zbc-gdfx.lrc',
+            ok: 'zbc-gdfx-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zbc-bywjwan.mp3',
+            songName: '不要忘记我爱你',
+            songAuto: '张碧晨',
+            duration: 225,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003A7AJz3StLoY_1.jpg?max_age=2592000',
+            lrc: 'zbc-bywjwan.lrc',
+            ok: 'zbc-bywjwan-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zbc-kwzcdwy.mp3',
+            songName: '开往早晨的午夜',
+            songAuto: '张碧晨',
+            duration: 287,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001IVee82XMxjn_1.jpg?max_age=2592000',
+            lrc: 'zbc-kwzcdwy.lrc',
+            ok: 'zbc-kwzcdwy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao82.com/lrc/zbc-ll.mp3',
+            songName: '凉凉',
+            songAuto: '张碧晨',
+            duration: 334,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000011IIJE3XYf9L_2.jpg?max_age=2592000',
+            lrc: 'zbc-ll.lrc',
+            ok: 'zbc-ll-ok.lrc'
+        },
     ]
 }

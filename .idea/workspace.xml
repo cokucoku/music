@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80151e91-3cf7-40c9-8c80-ffa6d6a54c67" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/musicList.js" beforeDir="false" afterPath="$PROJECT_DIR$/musicList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/musicList_BF.js" beforeDir="false" afterPath="$PROJECT_DIR$/musicList_BF.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,22 +18,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/musicList.js">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="23" />
+            <state relative-caret-position="624">
+              <caret line="638" column="61" selection-start-line="638" selection-start-column="61" selection-end-line="638" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+        <entry file="file://$PROJECT_DIR$/musicList_BF.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2340">
-              <caret line="487" column="104" selection-start-line="487" selection-start-column="104" selection-end-line="487" selection-end-column="104" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-              </folding>
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -41,20 +39,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>this.lrcList</find>
-      <find>this.xh</find>
-      <find>play(</find>
-      <find>music</find>
-      <find>lrcList</find>
-      <find>thestyle</find>
-      <find>isPlay</find>
-      <find>lrcText</find>
       <find>cur</find>
       <find>scrollY</find>
       <find>si1</find>
       <find>si2</find>
       <find>setinter</find>
-      <find>musicList</find>
       <find>duration</find>
       <find>format</find>
       <find>3p</find>
@@ -67,10 +56,19 @@
       <find>https://lx-sycdn.kuwo.cn/17270c4352fd916f22137eead62e82d8/659515fc/resource/n3/87/48/2437338318.mp3</find>
       <find>https://lv-sycdn.kuwo.cn/c7b22b9d50503868251570b9c5e02fb8/65960361/resource/30106/trackmedia/M800003m2sQw02KtPM.mp3</find>
       <find>https://lx-sycdn.kuwo.cn/8d22de72fe40647714dab512057914d2/659603f2/resource/n3/87/48/2437338318.mp3</find>
-      <find>progress</find>
-      <find>curtime</find>
       <find>m4a</find>
       <find>ogg</find>
+      <find>curtime</find>
+      <find>progress</find>
+      <find>this.xh</find>
+      <find>__</find>
+      <find>volume</find>
+      <find>authorlist ul li</find>
+      <find>allMusicList</find>
+      <find>musicList</find>
+      <find>周深</find>
+      <find>close</find>
+      <find>authorList</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -85,13 +83,14 @@
         <option value="$USER_HOME$/Desktop/play.html" />
         <option value="$PROJECT_DIR$/play.html" />
         <option value="$PROJECT_DIR$/index_ok.html" />
-        <option value="$PROJECT_DIR$/index_old.html" />
         <option value="$PROJECT_DIR$/musicList.js" />
+        <option value="$PROJECT_DIR$/index_old.html" />
+        <option value="$PROJECT_DIR$/musicList_BF.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="260" />
     <option name="y" value="20" />
     <option name="width" value="1400" />
@@ -102,7 +101,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,12 +112,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/ddoser/shop_speed_wbug_h5/vue-template-miaomiao" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -164,18 +163,24 @@
       <workItem from="1704180175129" duration="6955000" />
       <workItem from="1704246136137" duration="3023000" />
       <workItem from="1704250463480" duration="17179000" />
-      <workItem from="1704329610570" duration="13064000" />
+      <workItem from="1704329610570" duration="25680000" />
+      <workItem from="1704358455449" duration="2104000" />
+      <workItem from="1704416083051" duration="13863000" />
+      <workItem from="1704444446620" duration="1696000" />
+      <workItem from="1704692787832" duration="36000" />
+      <workItem from="1707288567504" duration="17000" />
+      <workItem from="1707380647977" duration="286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136690000" />
+    <option name="totallyTimeSpent" value="167308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12802951" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.091675445" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -214,22 +219,17 @@
     <entry file="file://$PROJECT_DIR$/index-歌词转场不突兀.html" />
     <entry file="file://$PROJECT_DIR$/index-2.html" />
     <entry file="file://$PROJECT_DIR$/index - 副本.html" />
-    <entry file="file://$USER_HOME$/Desktop/play.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/play.html" />
     <entry file="file://D:/play.html" />
     <entry file="file://F:/play.html" />
     <entry file="file://$PROJECT_DIR$/play.html" />
     <entry file="file://$PROJECT_DIR$/musicList.json" />
     <entry file="file://$PROJECT_DIR$/index_1.html" />
+    <entry file="file://$PROJECT_DIR$/musicList.js" />
     <entry file="file://$PROJECT_DIR$/index_old.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="536" column="30" lean-forward="true" selection-start-line="536" selection-start-column="30" selection-end-line="536" selection-end-column="30" />
+        <state relative-caret-position="373">
+          <caret line="598" column="8" lean-forward="true" selection-start-line="598" selection-start-column="8" selection-end-line="615" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -240,20 +240,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/musicList_BF.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2340">
-          <caret line="487" column="104" selection-start-line="487" selection-start-column="104" selection-end-line="487" selection-end-column="104" />
-          <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-          </folding>
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/musicList.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="23" />
+        <state relative-caret-position="624">
+          <caret line="638" column="61" selection-start-line="638" selection-start-column="61" selection-end-line="638" selection-end-column="61" />
         </state>
       </provider>
     </entry>

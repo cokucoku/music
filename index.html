@@ -599,6 +599,7 @@
   </div>
   <div class="authorIco" @click.stop="expGs=!expGs">歌手</div>
 </div>
+<script src="musicList_BF.js"></script>
 <script src="vue.min.js"></script>
 <script src="slider.js"></script>
 <script src="https://y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
@@ -628,10 +629,7 @@ new Vue({
         isSlider: false,//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
     },
     mounted() {
-        fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/musicList').then((rs) => {
-            return rs.json()
-        }).then((data) => {
-            this.allMusicList = data.list
+        this.allMusicList = data.list
             this.musicList = data.list
             this.initPlay()
             let authorList = []
@@ -639,6 +637,17 @@ new Vue({
                 authorList.push(el.songAuto)
             })
             this.authorList = Array.from(new Set(authorList))
+        fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/musicList').then((rs) => {
+            return rs.json()
+        }).then(() => {
+            // this.allMusicList = data.list
+            // this.musicList = data.list
+            // this.initPlay()
+            // let authorList = []
+            // data.list.forEach((el) => {
+            //     authorList.push(el.songAuto)
+            // })
+            // this.authorList = Array.from(new Set(authorList))
 
         })
         //按键

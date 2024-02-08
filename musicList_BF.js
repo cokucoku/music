@@ -1,4 +1,4 @@
-{
+let data={
     list: [
         {
             songUrl: 'https://music.leeao82.com/lrc/01-hgs.mp3',

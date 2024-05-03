@@ -1,0 +1,856 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_1468805_zwxe4z1cu0f.css">
+  <link rel="stylesheet" href="slider.css">
+  <title>[实战]54音乐播放器</title>
+  <style>
+  * {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  [v-cloak] {
+    display: none;
+  }
+
+  .musicct {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  .klok {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .klok span {
+    font-size: 36px;
+    position: relative;
+    filter: drop-shadow(0 3px 2px rgba(0, 0, 0, .8));
+    background-image: linear-gradient(#6CB8E6, #135FAD, #6CB8E6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /*需要文字透明*/
+    font-weight: bold;
+  }
+
+  .klok span:before {
+    content: attr(content);
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .klok span.cur:before {
+    background-image: linear-gradient(#ff0, #dace00, #ff0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /*需要文字透明*/
+    animation: jd var(--duration) both linear;
+  }
+
+  @keyframes jd {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 36px;
+    }
+  }
+
+
+  .music-top {
+    height: 88vh;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .topn {
+    width: 82%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .geci {
+    width: calc(100% - 342px);
+    height: 60vh;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    line-height: 42px;
+  }
+
+  .geci .gc {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .geci ul, .geci li {
+    transition: all .5s
+  }
+
+  .geci ul {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .geci .cur {
+    color: #3eaf7c;
+    transform: scale(1.5);
+  }
+
+  .music-bottom {
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+  }
+
+  .bgimg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: blur(15px);
+    opacity: .6;
+  }
+
+  .bgmark {
+    background-color: rgba(0, 0, 0, .35);
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  body {
+    background: #888;
+  }
+
+  .mark {
+    background-color: rgba(0, 0, 0, .35);
+    z-index: 4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  .musiclist {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #222;
+    z-index: 5;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+    transform: translateX(-100%);
+    color: #eee
+  }
+
+  .musiclist .list {
+    height: calc(100vh - 62px);
+    overflow-y: auto
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background: #3eaf7c;
+  }
+
+  ::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    background: #333;
+  }
+
+  .musiclist li {
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid 1px #444;
+    padding: 15px 20px 15px;
+    cursor: pointer;
+  }
+
+  .musiclist.exp {
+    transform: translateX(0%);
+  }
+
+  .musiclist .ti {
+    padding: 20px 20px;
+    color: #3eaf7c;
+    border-bottom: solid 1px #444;
+  }
+
+  .musiclist .ti i {
+    font-size: 12px;
+    font-style: normal;
+    margin-left: 4px;
+    color: #aaa
+  }
+
+  .musiclist li .name {
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .musiclist li .name img {
+    margin-left: 5px;
+  }
+
+  .musiclist li .authortime {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+  }
+
+  .musiclist li .author {
+    color: #aaa
+  }
+
+  .musiclist li .time {
+    color: #666
+  }
+
+  .musiclist li.cur {
+    background: #000
+  }
+
+  .musiclist li.cur,
+  .musiclist li.cur .author,
+  .musiclist li.cur .time {
+    color: #3eaf7c
+  }
+
+
+  .music {
+    display: flex;
+    align-items: center;
+    color: #eee;
+    width: 82%;
+  }
+
+  .iconfont {
+    font-size: 22px;
+    transition: all .2s
+  }
+
+  .iconfont.cur {
+    color: #3eaf7c;
+  }
+
+  .music .iconfont {
+    margin-right: 30px;
+    flex-shrink: 0;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .music .iconfont.icongeciweidianji, .music .iconfont.icongedan {
+    margin-right: 15px;
+  }
+
+
+  .music .iconfont:hover {
+    color: #3eaf7c
+  }
+
+  .music .musicinfo {
+    margin-right: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .music .musicinfo .info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 14px;
+    height: 14px;
+    margin-bottom: 12px;
+  }
+
+  .music .musicinfo .time em {
+    font-style: normal;
+  }
+
+  .music #icolist {
+    color: #3eaf7c
+  }
+
+  .music #icolist i {
+    font-style: normal;
+    font-size: 12px;
+  }
+
+
+  #volume {
+    width: 50px;
+  }
+
+  .cpj {
+    width: 342px;
+  }
+
+  .cpjn {
+    border-radius: 100%;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    background: linear-gradient(30deg, transparent 40%, rgba(42, 41, 40, .85) 40%) no-repeat 100% 0, linear-gradient(60deg, rgba(42, 41, 40, .85) 60%, transparent 60%) no-repeat 0 100%, repeating-radial-gradient(#2a2928, #2a2928 4px, #ada9a0 5px, #2a2928 6px);
+    background-size: 50% 100%, 100% 50%, 100% 100%;
+    box-shadow: 0 0 13px rgba(0, 0, 0, .9);
+    animation: rotate 16s infinite linear;
+    animation-play-state: paused;
+  }
+
+  #pic {
+    width: 50%;
+    height: 50%;
+    border-radius: 100%;
+    margin: 25%;
+    border: solid 4px #3eaf7c;
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .myu-enter,
+  .myu-leave-to {
+    opacity: 0;
+  }
+
+  .myu-enter-to,
+  .myu-leave {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .iconfont {
+      font-size: 14px;
+    }
+
+    .cpj {
+      width: 50%;
+      margin: 6vh 0;
+    }
+
+    .music-top {
+      height: 80vh;
+    }
+
+    .topn {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .geci {
+      height: 50vh;
+      width: 100%;
+    }
+
+    #volume {
+      display: none
+    }
+
+    .music .iconfont {
+      margin-right: 15px;
+    }
+
+    .music .iconfont.iconyinliang, .music .iconfont.iconjingyin {
+      margin-right: 0;
+    }
+
+    .music .musicinfo {
+      margin-right: 15px;
+    }
+
+    .music .musicinfo .info {
+      font-size: 12px;
+      line-height: 12px;
+      height: 12px;
+    }
+
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  </style>
+</head>
+
+<body>
+<div class="musicct">
+  <div class="klok" :style="{opacity:expGc?1:0}">
+    <div class="ht" v-for="(items,xh) in lrcOkText" :key="xh" v-show="items.cur">
+    <span v-for="item in toklokText(items)" :content="item.text" :class="{cur:item.cur}"
+          :style="'--duration:'+item.duration+'s'">{{item.text}}</span>
+    </div>
+  </div>
+  <div class="bgmark" v-if="music.length>0" v-cloak></div>
+  <div class="bgimg" v-if="music.length>0" :style="'background-image:url('+music[xh].cover+')'" v-cloak></div>
+  <div class="musiclist" :class="{exp:exp}" v-if="music.length>0" v-cloak>
+    <div class="ti">播放列表<i>{{music.length}}首歌曲</i></div>
+    <div class="list">
+      <ul>
+        <li v-for="(item,inx) in music" :class="{cur:inx==xh}" @click.stop="play(inx)">
+          <div class="name">{{item.name}}<img src="playing.gif" v-if="inx==xh"></div>
+          <div class="authortime">
+            <div class="author">{{item.author}}</div>
+            <div class="time">{{formatTime(item.duration)}}</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <transition name="myu">
+    <div class="mark" v-if="exp" @click="exp=false" v-cloak></div>
+  </transition>
+  <div class="music-top">
+    <div class="topn" v-if="music.length>0" v-cloak>
+      <div class="cpj">
+        <div class="cpjn" :style="thestyle">
+          <img id="pic" :src="music[xh].cover">
+        </div>
+      </div>
+      <div class="geci">
+        <ul :style="'transform:translateY('+scrollY+'px)'" v-if="lrcText.length>0">
+          <li v-for="(item,xh) in lrcText" :key="xh" :class="{cur:item.cur}">{{item.text}}</li>
+        </ul>
+        <div class="gc" v-else>歌词数据加载中...</div>
+      </div>
+    </div>
+    <div class="loadding" v-else style="color: #fff;" v-cloak>歌曲数据加载中...</div>
+  </div>
+  <div class="music-bottom">
+    <div class="music">
+      <div class="iconfont iconziyuan1" @click="prev"></div>
+      <div class="iconfont iconbofang" v-if="!isPlay" @click="play(xh)" v-cloak></div>
+      <div class="iconfont iconstop" v-if="isPlay" @click="pause" v-cloak></div>
+      <div class="iconfont iconziyuan" @click="next"></div>
+      <div class="musicinfo">
+        <div class="info" v-if="music.length>0" v-cloak>
+          <div class="nameauthor" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+            {{music[xh].name}} - {{music[xh].author}}
+          </div>
+          <div class="time" style="flex-shrink: 0;"><em>{{formatTime(curtime)}}</em> / <em>{{formatTime(music[xh].duration)}}</em>
+          </div>
+        </div>
+        <div class="info" v-else v-cloak>
+          <div class="nameauthor">-- - --</div>
+          <div class="time"><em>00:00</em> / <em>00:00</em></div>
+        </div>
+        <div id="jd" class="jd"></div>
+      </div>
+      <div class="iconfont icongeciweidianji" @click.stop="expGc=!expGc" :class="{cur:expGc}"></div>
+      <div id="icolist" class="iconfont icongedan" @click.stop="exp=!exp"><i>{{music.length}}</i></div>
+      <div class="iconfont iconyinliang" @click="volume=0" v-if="volume!=0" v-cloak></div>
+      <div style="color: #3eaf7c" class="iconfont iconjingyin" @click="volume=1" v-else v-cloak></div>
+      <div id="volume"></div>
+    </div>
+  </div>
+</div>
+<script src="vue.min.js"></script>
+<script src="slider.js"></script>
+<script src="https://y.gtimg.cn/music/h5/player/player.js?max_age=2592000"></script>
+<script>
+new Vue({
+    el: '.musicct',
+    data: {
+        player: new QMplayer(),
+        musicList: [],//API获取的列表
+        lrcText: [],//当前歌曲对应的歌词
+        lrcOkText: [],//当前歌曲对应的歌词,这个提供给卡拉OK用的，
+        klokText: [],//当前歌曲对应的卡拉ok歌词
+        scrollY: 0,//歌词滚动Y
+        music: [], //存放播放列表,这个是有很多详细内容,数据拼接的,用于左侧musiclist
+        isPlay: false,
+        xh: 0, //播放的音乐的序号
+        curtime: 0, //播放當前時間
+        setinter: '', //保存定時器名稱
+        si1: '',//进度条
+        si2: '',//音量对象
+        exp: false,//展开歌曲列表
+        expGc: false,//展开卡拉OK歌词
+        volume: 1,
+        isSlider: false,//这边加这个数据，是为了区别滑块滑动中this.curtime变动，但是timeupdate不去变动this.curtime
+        //setss: '',//这个是一直获取this.player.data.songs的定时器
+        //songs: {}
+    },
+    mounted() {
+        fetch('https://www.fastmock.site/mock/bf15b8c92292c4ba8a738145abc2c6ed/api/music').then((rs) => {
+            return rs.json()
+        }).then((data) => {
+            this.musicList = data.list
+            let musicList = []
+            data.list.forEach((el) => {
+                musicList.push(el.songId)
+            })
+            this.player.play(musicList, {index: 0})
+            this.getSongs()
+
+        })
+
+        // 监听事件
+        this.player.on("play", () => {
+            this.xh = this.player.data.index//赋值当前歌曲的XH
+            this.isPlay = true
+        })
+        this.player.on("pause", () => {
+            this.isPlay = false
+        })
+        this.player.on("timeupdate", () => {
+            if (!this.isSlider) {//意思是滑块释放当前时间才变动
+                this.curtime = this.player.currentTime
+            }
+        })
+        this.si1 = new Slider(
+            '#jd', {
+                theme: 'green', //red,yellow,black,green,
+                size: 's', //s,m,l
+                initvalue: 0, //初始值
+                showtip: false,
+                slideend: (val, string) => {
+                    if (this.setinter) {
+                        clearInterval(this.setinter)
+                    }
+                    if (string != 'end' && this.curtime > 0) {//意思是滑动中当前时间要变动
+                        this.isSlider = true
+                        this.curtime = val * this.music[this.xh].duration / 100//
+                    }
+                    if (string == 'end') {
+                        this.player.__.audio.currentTime = val * this.music[this.xh].duration / 100
+                        this.progress()
+                        this.isSlider = false
+                        if (!this.isPlay) {
+                            this.play(this.xh)
+                        }
+                    }
+                }
+            });
+        if (document.querySelector('#volume').scrollWidth > 0) {
+            this.si2 = new Slider(
+                '#volume', {
+                    theme: 'green', //red,yellow,black,green,
+                    size: 's', //s,m,l
+                    initvalue: 100, //初始值
+                    showtip: false,
+                    slideend: (val) => {
+                        this.volume = val / 100
+                        this.player.__.audio.volume = val / 100
+                    }
+                });
+        }
+
+    },
+    watch: {
+        volume: {
+            immediate: true,
+            handler(value) {
+                this.$nextTick(function () {
+                    if (value == 0) {
+                        this.player.__.audio.volume = 0
+                        if (document.querySelector('#volume').scrollWidth > 0) {
+                            this.si2.go(0)
+                        }
+                    } else {
+                        this.player.__.audio.volume = this.volume
+                        if (document.querySelector('#volume').scrollWidth > 0) {
+                            this.si2.go(this.volume * 100)
+                        }
+                    }
+                })
+            }
+        },
+        curtime: {
+            immediate: true,
+            handler(value) {
+                this.$nextTick(function () {
+                    if (value == 0) {
+                        this.si1.disabled()
+                    } else {
+                        this.si1.enabled()
+                    }
+                })
+            }
+        },
+        isPlay: {
+            immediate: true,
+            handler(value) {
+                this.$nextTick(() => {
+                    if (value) {
+                        this.progress()
+                    }
+                })
+            }
+        },
+        xh: {
+            immediate: false,
+            handler(value) {
+                this.lrcText = []
+                this.klokText = []
+                this.lrcOkText = []
+                if (this.music.length>0) {
+                    //获取当前歌曲对应歌词
+                    fetch('lrc/' + this.music[value].lrc)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el, xh) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                            })
+                        });
+                    fetch('lrc/' + this.music[value].ok)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                if (rs[1]) {
+                                    this.lrcOkText.push({btime: rs[0] + ']', text: el});
+                                }
+                            })
+                        });
+                }
+            }
+        }
+    },
+    computed: {
+        thestyle() {
+            if (this.isPlay) {
+                return 'animation-play-state:running'
+            } else {
+                return 'animation-play-state:paused'
+            }
+        }
+    },
+    methods: {
+        getSongs() {
+            let setss = setInterval(() => {
+                let songs = this.player.data.songs
+                if (songs[0] != undefined) {
+                    for (let i in songs) {
+                        let id = songs[i].id
+                        let fi = this.musicList.filter((el) => {
+                            return el.songId == id
+                        })
+                        this.music.push({
+                            id: id,
+                            name: songs[i].name,
+                            author: songs[i].singer[0].name,
+                            duration: songs[i].interval,
+                            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000' + songs[i].album.mid + '.jpg',
+                            lrc: fi[0].lrc,
+                            ok: fi[0].ok,
+                        })
+                    }
+                    //获取当前歌曲对应歌词
+                    fetch('lrc/' + this.music[0].lrc)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el, xh) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                this.lrcText.push({xh: xh + 1, btime: rs[0] + ']', text: rs[1]});
+                            })
+                        });
+                    fetch('lrc/' + this.music[0].ok)
+                        .then((response) => {
+                            return response.text();
+                        })
+                        .then((myJson) => {
+                            let line = myJson.split('\n');
+                            line.forEach((el) => {
+                                let rs = el.split(']');
+                                if (rs[1] == undefined) {
+                                    rs[1] = "";
+                                }
+                                if (rs[1]) {
+                                    this.lrcOkText.push({btime: rs[0] + ']', text: el});
+                                }
+                            })
+                        });
+                    clearInterval(setss)
+                }
+            }, 400)
+        },
+        toklokText(el) {
+            let klokText = []
+            let myJson = el.text
+            let line = myJson.split('[');
+            line.forEach((el, xh) => {
+                let rs = el.split(']');
+                if (rs[1] == ' ') {
+                    rs[1] = "";//本来想&nbsp;的 但是:before不支持HTML
+                }
+                if (rs[1] == undefined) {
+                    rs[1] = "";
+                }
+                if (rs[1] || rs[0]) {
+                    klokText.push({btime: '[' + rs[0] + ']', text: rs[1]});
+                }
+            })
+            klokText.reduce((pre, next) => {
+                let blastSec = this.toSec(pre);
+                let elastSec = this.toSec(next);
+                this.$set(pre, 'duration', elastSec - blastSec)
+                return next
+            })
+            let fiii = klokText.filter((el) => {
+                let lastSec = this.toSec(el);
+                let diff = this.curtime;
+                return diff - lastSec >= 0
+            })
+            fiii.forEach((el) => {
+                this.$set(el, 'cur', true)
+            })
+            return klokText
+
+        },
+        formatTime(value) {
+            let fen = Math.floor(value / 60)
+            let yu = Math.floor(value % 60)
+            if (fen < 10) {
+                fen = '0' + fen
+            } else {
+                fen = fen
+            }
+            if (yu < 10) {
+                yu = '0' + yu
+            } else {
+                yu = yu
+            }
+            return fen + ':' + yu
+        },
+        play(index) {
+            this.xh = index
+            this.player.play(this.music, {index})
+        },
+        pause() {
+            this.player.pause()
+        },
+        prev() {
+            this.player.playPrev();
+
+        },
+        next() {
+            this.player.playNext();
+        },
+        toSec(el) {//[00:12.52]类型时间转为秒函数
+            let min = Number(el.btime.substr(1, 2));
+            let sec = Number(el.btime.substring(4, el.btime.length - 1));
+            let lastSec = min * 60 + sec;
+            return lastSec
+        },
+        progress() {
+            this.setinter = setInterval(() => {
+                let pos = this.curtime / this.music[this.xh].duration * 100
+                this.si1.go(pos)
+                //歌词处理
+                this.lrcText.forEach((el) => {
+                    this.$set(el, 'cur', false)
+                })
+                let fi = this.lrcText.filter((el) => {
+                    let lastSec = this.toSec(el);
+                    let diff = this.curtime;
+                    return diff - lastSec >= 0
+                })
+                if (fi[fi.length - 1]) {
+                    this.$set(fi[fi.length - 1], 'cur', true)
+                    let midxh = document.querySelector('.geci').offsetHeight * 0.8 / 42//这个是中间序号，这样滚动加亮在整体中间
+                    midxh = Math.ceil(midxh / 2) + 1
+                    if (fi[fi.length - 1].xh > midxh && this.scrollY < midxh * 42) {
+                        this.scrollY = -42 * (fi[fi.length - 1].xh - midxh);
+                    } else {
+                        this.scrollY = 0
+                    }
+                }
+                //卡拉OK歌词处理
+                this.lrcOkText.forEach((el) => {
+                    this.$set(el, 'cur', false)
+                })
+                let fii = this.lrcOkText.filter((el) => {
+                    let lastSec = this.toSec(el);
+                    let diff = this.curtime;
+                    return diff - lastSec >= 0
+                })
+                if (fii[fii.length - 1]) {
+                    this.$set(fii[fii.length - 1], 'cur', true)
+                }
+            }, 1)
+
+        }
+    }
+})
+</script>
+</body>
+
+</html>

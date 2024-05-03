@@ -1,7 +1,7 @@
 let data={
     list: [
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/04-gl.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/04-gl.mp3',
             songName: '光亮',
             songAuto: '周深',
             duration: 288,
@@ -10,7 +10,7 @@ let data={
             ok: '04-gl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/01-hgs.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/01-hgs.mp3',
             songName: '胡广生',
             songAuto: '任素夕',
             duration: 215,
@@ -19,7 +19,7 @@ let data={
             ok: '01-hgs-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/02-mq.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/02-mq.mp3',
             songName: '麻雀',
             songAuto: '李荣浩',
             duration: 252,
@@ -28,7 +28,7 @@ let data={
             ok: '02-mq-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/03-lzy.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/03-lzy.mp3',
             songName: '庐州月',
             songAuto: '许嵩',
             duration: 255,
@@ -37,7 +37,7 @@ let data={
             ok: '03-lzy-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/05-xhn.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/05-xhn.mp3',
             songName: '喜欢你',
             songAuto: 'beyond',
             duration: 276,
@@ -46,7 +46,7 @@ let data={
             ok: '05-xhn-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/06-kdzyddf.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/06-kdzyddf.m4a',
             songName: '看得最远的地方',
             songAuto: '毛不易',
             duration: 252,
@@ -55,7 +55,7 @@ let data={
             ok: '06-kdzyddf-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/07-zypf.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/07-zypf.mp3',
             songName: '只要平凡',
             songAuto: '张杰&张碧晨',
             duration: 246,
@@ -64,7 +64,7 @@ let data={
             ok: '07-zypf-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/08-hnyy.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/08-hnyy.mp3',
             songName: '和你一样',
             songAuto: '李宇春',
             duration: 307,
@@ -73,7 +73,7 @@ let data={
             ok: '08-hnyy-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/09-lxl.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/09-lxl.mp3',
             songName: '李香兰',
             songAuto: '张学友',
             duration: 396,
@@ -82,7 +82,7 @@ let data={
             ok: '09-lxl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/10-bysh.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/10-bysh.m4a',
             songName: '不要说话',
             songAuto: '陈奕迅',
             duration: 288,
@@ -91,7 +91,7 @@ let data={
             ok: '10-bysh-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/11-wack.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/11-wack.mp3',
             songName: '为爱痴狂',
             songAuto: '金志文',
             duration: 142,
@@ -100,7 +100,7 @@ let data={
             ok: '11-wack-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/12-mtnh.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/12-mtnh.mp3',
             songName: '明天，你好',
             songAuto: '牛奶咖啡',
             duration: 271,
@@ -109,7 +109,7 @@ let data={
             ok: '12-mtnh-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/13-bjdt.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/13-bjdt.mp3',
             songName: '北京的天',
             songAuto: '青蛙乐队',
             duration: 243,
@@ -118,7 +118,7 @@ let data={
             ok: '13-bjdt-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/14-xaddf.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/14-xaddf.mp3',
             songName: '相爱的地方',
             songAuto: '青蛙乐队',
             duration: 234,
@@ -127,7 +127,7 @@ let data={
             ok: '14-xaddf-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/15-mhwgo.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/15-mhwgo.mp3',
             songName: 'My Heart Will Go On',
             songAuto: '席琳·迪翁',
             duration: 300,
@@ -136,7 +136,7 @@ let data={
             ok: '15-mhwgo-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/16-mybd.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/16-mybd.mp3',
             songName: 'Move Your Body',
             songAuto: 'Sia/Alan Walker',
             duration: 217,
@@ -145,7 +145,7 @@ let data={
             ok: '16-mybd-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/17-rh.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/17-rh.m4a',
             songName: '绒花',
             songAuto: '韩红',
             duration: 267,
@@ -154,7 +154,7 @@ let data={
             ok: '17-rh-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/18-je.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/18-je.mp3',
             songName: '九儿',
             songAuto: '韩红',
             duration: 152,
@@ -163,7 +163,7 @@ let data={
             ok: '18-je-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/19-kdqr.ogg',
+            songUrl: 'https://music.leeao8.cn/lrc/19-kdqr.ogg',
             songName: '口袋情人',
             songAuto: 'sky',
             duration: 208,
@@ -172,7 +172,7 @@ let data={
             ok: '19-kdqr-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/20-qfl.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/20-qfl.mp3',
             songName: '起风了',
             songAuto: '周深',
             duration: 311,
@@ -181,7 +181,7 @@ let data={
             ok: '20-qfl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/21-bhl.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/21-bhl.mp3',
             songName: '白桦林',
             songAuto: '朴树',
             duration: 227,
@@ -190,7 +190,7 @@ let data={
             ok: '21-bhl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/22-ycsl.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/22-ycsl.mp3',
             songName: '一程山路',
             songAuto: '毛不易',
             duration: 197,
@@ -199,7 +199,7 @@ let data={
             ok: '22-ycsl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/23-cd.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/23-cd.mp3',
             songName: '成都',
             songAuto: '赵雷',
             duration: 328,
@@ -208,7 +208,7 @@ let data={
             ok: '23-cd-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/24-lgh.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/24-lgh.mp3',
             songName: '泸沽湖',
             songAuto: '麻园诗人',
             duration: 246,
@@ -217,7 +217,7 @@ let data={
             ok: '24-lgh-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zjl-yfzm.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zjl-yfzm.mp3',
             songName: '以父之名',
             songAuto: '周杰伦',
             duration: 342,
@@ -226,7 +226,7 @@ let data={
             ok: 'zjl-yfzm-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zjl-bcgm.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zjl-bcgm.mp3',
             songName: '本草纲目',
             songAuto: '周杰伦',
             duration: 210,
@@ -235,7 +235,7 @@ let data={
             ok: 'zjl-bcgm-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zjl-ltx.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zjl-ltx.mp3',
             songName: '兰亭序',
             songAuto: '周杰伦',
             duration: 254,
@@ -244,7 +244,7 @@ let data={
             ok: 'zjl-ltx-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zjl-qhc.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zjl-qhc.mp3',
             songName: '青花瓷',
             songAuto: '周杰伦',
             duration: 237,
@@ -253,7 +253,7 @@ let data={
             ok: 'zjl-qhc-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zjl-yq.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zjl-yq.mp3',
             songName: '夜曲',
             songAuto: '周杰伦',
             duration: 226,
@@ -262,7 +262,7 @@ let data={
             ok: 'zjl-yq-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zbc-nl.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zbc-nl.mp3',
             songName: '年轮',
             songAuto: '张碧晨',
             duration: 273,
@@ -271,7 +271,7 @@ let data={
             ok: 'zbc-nl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zbc-long.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zbc-long.mp3',
             songName: '笼',
             songAuto: '张碧晨',
             duration: 300,
@@ -280,7 +280,7 @@ let data={
             ok: 'zbc-long-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zbc-gdfx.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zbc-gdfx.mp3',
             songName: '光的方向',
             songAuto: '张碧晨',
             duration: 183,
@@ -289,7 +289,7 @@ let data={
             ok: 'zbc-gdfx-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zbc-bywjwan.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zbc-bywjwan.mp3',
             songName: '不要忘记我爱你',
             songAuto: '张碧晨',
             duration: 225,
@@ -298,7 +298,7 @@ let data={
             ok: 'zbc-bywjwan-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zbc-kwzcdwy.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zbc-kwzcdwy.mp3',
             songName: '开往早晨的午夜',
             songAuto: '张碧晨',
             duration: 287,
@@ -307,7 +307,7 @@ let data={
             ok: 'zbc-kwzcdwy-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zbc-ll.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zbc-ll.mp3',
             songName: '凉凉',
             songAuto: '张碧晨',
             duration: 334,
@@ -316,7 +316,7 @@ let data={
             ok: 'zbc-ll-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-bznl.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-bznl.m4a',
             songName: '别再闹了',
             songAuto: '毛不易',
             duration: 227,
@@ -325,7 +325,7 @@ let data={
             ok: 'mby-bznl-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-br.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-br.mp3',
             songName: '不染',
             songAuto: '毛不易',
             duration: 325,
@@ -334,7 +334,7 @@ let data={
             ok: 'mby-br-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-dbmy.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-dbmy.mp3',
             songName: '东北民谣',
             songAuto: '毛不易',
             duration: 279,
@@ -343,7 +343,7 @@ let data={
             ok: 'mby-dbmy-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-gngw.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-gngw.m4a',
             songName: '给你给我',
             songAuto: '毛不易',
             duration: 241,
@@ -352,7 +352,7 @@ let data={
             ok: 'mby-gngw-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-hmhek.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-hmhek.mp3',
             songName: '红莓花儿开',
             songAuto: '毛不易',
             duration: 262,
@@ -361,7 +361,7 @@ let data={
             ok: 'mby-hmhek-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-wmdr.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-wmdr.mp3',
             songName: '无名的人',
             songAuto: '毛不易',
             duration: 282,
@@ -370,7 +370,7 @@ let data={
             ok: 'mby-wmdr-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-yy.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-yy.mp3',
             songName: '呓语',
             songAuto: '毛不易',
             duration: 271,
@@ -379,7 +379,7 @@ let data={
             ok: 'mby-yy-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-jie.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-jie.m4a',
             songName: '借',
             songAuto: '毛不易',
             duration: 243,
@@ -388,7 +388,7 @@ let data={
             ok: 'mby-jie-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-pfdyt.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-pfdyt.m4a',
             songName: '平凡的一天',
             songAuto: '毛不易',
             duration: 276,
@@ -397,7 +397,7 @@ let data={
             ok: 'mby-pfdyt-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-rgyyt.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-rgyyt.m4a',
             songName: '如果有一天我变得很有钱',
             songAuto: '毛不易',
             duration: 170,
@@ -406,7 +406,7 @@ let data={
             ok: 'mby-rgyyt-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-rh.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-rh.m4a',
             songName: '入海',
             songAuto: '毛不易',
             duration: 249,
@@ -415,7 +415,7 @@ let data={
             ok: 'mby-rh-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-sx.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-sx.m4a',
             songName: '盛夏',
             songAuto: '毛不易',
             duration: 274,
@@ -424,7 +424,7 @@ let data={
             ok: 'mby-sx-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-ww.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-ww.m4a',
             songName: '无问',
             songAuto: '毛不易',
             duration: 258,
@@ -433,7 +433,7 @@ let data={
             ok: 'mby-ww-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-xwzydr.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-xwzydr.m4a',
             songName: '像我这样的人',
             songAuto: '毛不易',
             duration: 207,
@@ -441,7 +441,7 @@ let data={
             lrc: 'mby-xwzydr.lrc',
             ok: 'mby-xwzydr-ok.lrc'
         },{
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-xc.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-xc.m4a',
             songName: '消愁',
             songAuto: '毛不易',
             duration: 261,
@@ -449,7 +449,7 @@ let data={
             lrc: 'mby-xc.lrc',
             ok: 'mby-xc-ok.lrc'
         },{
-            songUrl: 'https://music.leeao8.cn/music/lrc/mby-yhys.m4a',
+            songUrl: 'https://music.leeao8.cn/lrc/mby-yhys.m4a',
             songName: '一荤一素',
             songAuto: '毛不易',
             duration: 281,
@@ -458,7 +458,7 @@ let data={
             ok: 'mby-yhys-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zxy-hsjdnzh.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zxy-hsjdnzh.mp3',
             songName: '还是觉得你最好',
             songAuto: '张学友',
             duration: 320,
@@ -467,7 +467,7 @@ let data={
             ok: 'zxy-hsjdnzh-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zs-bjbs.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zs-bjbs.mp3',
             songName: '不见不散',
             songAuto: '周深',
             duration: 258,
@@ -476,7 +476,7 @@ let data={
             ok: 'zs-bjbs-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zs-ysyyq.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zs-ysyyq.mp3',
             songName: '云裳羽衣曲',
             songAuto: '周深',
             duration: 296,
@@ -485,7 +485,7 @@ let data={
             ok: 'zs-ysyyq-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zs-km.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zs-km.mp3',
             songName: '可梦',
             songAuto: '周深',
             duration: 269,
@@ -494,7 +494,7 @@ let data={
             ok: 'zs-km-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zs-htsnz.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zs-htsnz.mp3',
             songName: '胡同少年志',
             songAuto: '周深',
             duration: 213,
@@ -503,7 +503,7 @@ let data={
             ok: 'zs-htsnz-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zs-xyzs.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zs-xyzs.mp3',
             songName: '悬崖之上',
             songAuto: '周深',
             duration: 293,
@@ -512,7 +512,7 @@ let data={
             ok: 'zs-xyzs-ok.lrc'
         },
         {
-            songUrl: 'https://music.leeao8.cn/music/lrc/zs-zgctdr.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/zs-zgctdr.mp3',
             songName: '追赶春天的人',
             songAuto: '周深',
             duration: 242,

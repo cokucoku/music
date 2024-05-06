@@ -521,7 +521,7 @@ let data={
             ok: 'zs-zgctdr-ok.lrc'
         },
         {
-            songUrl: 'https://leeao8.gitee.io/music/lrc/cyx-kgzw.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/cyx-kgzw.mp3',
             songName: 'K歌之王',
             songAuto: '陈奕迅',
             duration: 222,
@@ -530,7 +530,7 @@ let data={
             ok: 'cyx-kgzw-ok.lrc'
         },
         {
-            songUrl: 'https://leeao8.gitee.io/music/lrc/cyx-sn.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/cyx-sn.mp3',
             songName: '十年',
             songAuto: '陈奕迅',
             duration: 205,
@@ -539,7 +539,7 @@ let data={
             ok: 'cyx-sn-ok.lrc'
         },
         {
-            songUrl: 'https://leeao8.gitee.io/music/lrc/cyx-gyz.mp3',
+            songUrl: 'https://music.leeao8.cn/lrc/cyx-gyz.mp3',
             songName: '孤勇者',
             songAuto: '陈奕迅',
             duration: 256,

@@ -547,5 +547,50 @@ let data={
             lrc: 'cyx-gyz.lrc',
             ok: 'cyx-gyz-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/hyb-ymhtm.mp3',
+            songName: '有梦好甜蜜',
+            songAuto: '胡彦斌',
+            duration: 230,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003a2KWp1NOAWO_1.jpg?max_age=2592000',
+            lrc: 'hyb-ymhtm.lrc',
+            ok: 'hyb-ymhtm-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/hyb-yg.mp3',
+            songName: '月光',
+            songAuto: '胡彦斌',
+            duration: 272,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001113yq0FzW3O_4.jpg?max_age=2592000',
+            lrc: 'hyb-yg.lrc',
+            ok: 'hyb-yg-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/hyb-nydqnz.mp3',
+            songName: '你要的全拿走',
+            songAuto: '胡彦斌',
+            duration: 299,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001eyHlv2fu50T_2.jpg?max_age=2592000',
+            lrc: 'hyb-nydqnz.lrc',
+            ok: 'hyb-nydqnz-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/hyb-hy.mp3',
+            songName: '红颜',
+            songAuto: '胡彦斌',
+            duration: 218,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000mvkrK1eja7c_4.jpg?max_age=2592000',
+            lrc: 'hyb-hy.lrc',
+            ok: 'hyb-hy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/500mile.mp3',
+            songName: 'five hundred miles',
+            songAuto: 'Justin Timberlake',
+            duration: 205,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003NY5cG15yFa7_1.jpg?max_age=2592000',
+            lrc: '500mile.lrc',
+            ok: '500mile-ok.lrc'
+        },
     ]
 }

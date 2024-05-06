@@ -520,5 +520,32 @@ let data={
             lrc: 'zs-zgctdr.lrc',
             ok: 'zs-zgctdr-ok.lrc'
         },
+        {
+            songUrl: 'https://leeao8.gitee.io/music/lrc/cyx-kgzw.mp3',
+            songName: 'K歌之王',
+            songAuto: '陈奕迅',
+            duration: 222,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002X5NAN24f6TQ_1.jpg?max_age=2592000',
+            lrc: 'cyx-kgzw.lrc',
+            ok: 'cyx-kgzw-ok.lrc'
+        },
+        {
+            songUrl: 'https://leeao8.gitee.io/music/lrc/cyx-sn.mp3',
+            songName: '十年',
+            songAuto: '陈奕迅',
+            duration: 205,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000GDz8k03UOaI_1.jpg?max_age=2592000',
+            lrc: 'cyx-sn.lrc',
+            ok: 'cyx-sn-ok.lrc'
+        },
+        {
+            songUrl: 'https://leeao8.gitee.io/music/lrc/cyx-gyz.mp3',
+            songName: '孤勇者',
+            songAuto: '陈奕迅',
+            duration: 256,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001uaPM93kxk1R_3.jpg?max_age=2592000',
+            lrc: 'cyx-gyz.lrc',
+            ok: 'cyx-gyz-ok.lrc'
+        },
     ]
 }

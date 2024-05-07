@@ -592,5 +592,77 @@ let data={
             lrc: '500mile.lrc',
             ok: '500mile-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-hhsz.mp3',
+            songName: '护花使者',
+            songAuto: '李克勤',
+            duration: 195,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001qjxAG2mEJ1o_2.jpg?max_age=2592000',
+            lrc: 'lkq-hhsz.lrc',
+            ok: 'lkq-hhsz-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-yhxyq.mp3',
+            songName: '月半小夜曲',
+            songAuto: '李克勤',
+            duration: 292,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001Vdkw84cPdmT_2.jpg?max_age=2592000',
+            lrc: 'lkq-yhxyq.lrc',
+            ok: 'lkq-yhxyq-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-hr.mp3',
+            songName: '红日',
+            songAuto: '李克勤',
+            duration: 287,
+            cover: 'https://img1.kuwo.cn/star/albumcover/300/24/46/1974600562.jpg',
+            lrc: 'lkq-hr.lrc',
+            ok: 'lkq-hr-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-wfxlc.mp3',
+            songName: '晚风心里吹',
+            songAuto: '李克勤',
+            duration: 202,
+            cover: 'https://img1.kuwo.cn/star/albumcover/300/77/81/977749629.jpg',
+            lrc: 'lkq-wfxlc.lrc',
+            ok: 'lkq-wfxlc-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-hjbh.mp3',
+            songName: '合久必婚',
+            songAuto: '李克勤',
+            duration: 193,
+            cover: 'https://img1.kuwo.cn/star/albumcover/300/89/82/391717905.jpg',
+            lrc: 'lkq-hjbh.lrc',
+            ok: 'lkq-hjbh-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-anbxyly.mp3',
+            songName: '爱你不需要理由',
+            songAuto: '李克勤',
+            duration: 254,
+            cover: 'https://img1.kuwo.cn/star/albumcover/300/81/28/4245999644.jpg',
+            lrc: 'lkq-anbxyly.lrc',
+            ok: 'lkq-anbxyly-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-txyqr.mp3',
+            songName: '天下有情人',
+            songAuto: '李克勤',
+            duration: 269,
+            cover: 'https://img1.kuwo.cn/star/albumcover/300/68/15/181552954.jpg',
+            lrc: 'lkq-txyqr.lrc',
+            ok: 'lkq-txyqr-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/lkq-mz.mp3',
+            songName: '秒针',
+            songAuto: '李克勤',
+            duration: 173,
+            cover: 'https://img1.kuwo.cn/star/albumcover/300/6/56/2723550937.jpg',
+            lrc: 'lkq-mz.lrc',
+            ok: 'lkq-mz-ok.lrc'
+        },
     ]
 }

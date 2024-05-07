@@ -664,5 +664,95 @@ let data={
             lrc: 'lkq-mz.lrc',
             ok: 'lkq-mz-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-yy.mp3',
+            songName: '演员',
+            songAuto: '薛之谦',
+            duration: 271,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003y8dsH2wBHlo_1.jpg?max_age=2592000',
+            lrc: 'xzq-yy.lrc',
+            ok: 'xzq-yy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-twlw.mp3',
+            songName: '天外来物',
+            songAuto: '薛之谦',
+            duration: 257,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000K9Zp13TZp5s_1.jpg?max_age=2592000',
+            lrc: 'xzq-twlw.lrc',
+            ok: 'xzq-twlw-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-yw.mp3',
+            songName: '意外',
+            songAuto: '薛之谦',
+            duration: 287,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000QgFcm0v8WaF_1.jpg?max_age=2592000',
+            lrc: 'xzq-yw.lrc',
+            ok: 'xzq-yw-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-rzdx.mp3',
+            songName: '认真的雪',
+            songAuto: '薛之谦',
+            duration: 261,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003mUYW22JXKVK_1.jpg?max_age=2592000',
+            lrc: 'xzq-rzdx.lrc',
+            ok: 'xzq-rzdx-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-ss.mp3',
+            songName: '绅士',
+            songAuto: '薛之谦',
+            duration: 291,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003y8dsH2wBHlo_1.jpg?max_age=2592000',
+            lrc: 'xzq-ss.lrc',
+            ok: 'xzq-ss-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-whxznjgn.mp3',
+            songName: '我好像在哪见过你',
+            songAuto: '薛之谦',
+            duration: 279,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000dcZ9I1nzO62_1.jpg?max_age=2592000',
+            lrc: 'xzq-whxznjgn.lrc',
+            ok: 'xzq-whxznjgn-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-qs.mp3',
+            songName: '其实',
+            songAuto: '薛之谦',
+            duration: 242,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000QgFcm0v8WaF_1.jpg?max_age=2592000',
+            lrc: 'xzq-qs.lrc',
+            ok: 'xzq-qs-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-ggh.mp3',
+            songName: '刚刚好',
+            songAuto: '薛之谦',
+            duration: 250,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000dcZ9I1nzO62_1.jpg?max_age=2592000',
+            lrc: 'xzq-ggh.lrc',
+            ok: 'xzq-ggh-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-gk.mp3',
+            songName: '怪咖',
+            songAuto: '薛之谦',
+            duration: 250,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M0000015rUVB2OUdGA_1.jpg?max_age=2592000',
+            lrc: 'xzq-gk.lrc',
+            ok: 'xzq-gk-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xzq-nhywzy.mp3',
+            songName: '你还要我怎样',
+            songAuto: '薛之谦',
+            duration: 311,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000QgFcm0v8WaF_1.jpg?max_age=2592000',
+            lrc: 'xzq-nhywzy.lrc',
+            ok: 'xzq-nhywzy-ok.lrc'
+        },
     ]
 }

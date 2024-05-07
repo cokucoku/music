@@ -754,5 +754,86 @@ let data={
             lrc: 'xzq-nhywzy.lrc',
             ok: 'xzq-nhywzy-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-llh.mp3',
+            songName: '蓝莲花',
+            songAuto: '许巍',
+            duration: 270,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003GDQSA1c4k5T_2.jpg?max_age=2592000',
+            lrc: 'xw-llh.lrc',
+            ok: 'xw-llh-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-cjdn.mp3',
+            songName: '曾经的你',
+            songAuto: '许巍',
+            duration: 259,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000lrk6m1fk7tl_2.jpg?max_age=2592000',
+            lrc: 'xw-cjdn.lrc',
+            ok: 'xw-cjdn-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-xfyyzy.mp3',
+            songName: '像风一样自由',
+            songAuto: '许巍',
+            duration: 221,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000K1xeI0bbYeQ_2.jpg?max_age=2592000',
+            lrc: 'xw-xfyyzy.lrc',
+            ok: 'xw-xfyyzy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-gx.mp3',
+            songName: '故乡',
+            songAuto: '许巍',
+            duration: 315,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003ABtp4335BAq_1.jpg?max_age=2592000',
+            lrc: 'xw-gx.lrc',
+            ok: 'xw-gx-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-lx.mp3',
+            songName: '旅行',
+            songAuto: '许巍',
+            duration: 263,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000lrk6m1fk7tl_2.jpg?max_age=2592000',
+            lrc: 'xw-lx.lrc',
+            ok: 'xw-lx-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-wmsh.mp3',
+            songName: '完美生活',
+            songAuto: '许巍',
+            duration: 296,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003GDQSA1c4k5T_2.jpg?max_age=2592000',
+            lrc: 'xw-wmsh.lrc',
+            ok: 'xw-wmsh-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-sg.mp3',
+            songName: '时光',
+            songAuto: '许巍',
+            duration: 305,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003GDQSA1c4k5T_2.jpg?max_age=2592000',
+            lrc: 'xw-sg.lrc',
+            ok: 'xw-sg-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-wda.mp3',
+            songName: '我的爱',
+            songAuto: '许巍',
+            duration: 212,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003Yldu71zztUa_5.jpg?max_age=2592000',
+            lrc: 'xw-wda.lrc',
+            ok: 'xw-wda-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/xw-shbzyqdgq.mp3',
+            songName: '生活不止眼前的苟且',
+            songAuto: '许巍',
+            duration: 310,
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002mht8Z3aUVQS_4.jpg?max_age=2592000',
+            lrc: 'xw-shbzyqdgq.lrc',
+            ok: 'xw-shbzyqdgq-ok.lrc'
+        },
     ]
 }

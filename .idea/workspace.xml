@@ -2,6 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49daeb71-5374-415d-9462-fb12758a86f3" name="默认的" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/hyb-yg-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/hyb-yg-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/hyb-yg.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/hyb-yg.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-br-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-br-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-br.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-br.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-dbmy-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-dbmy-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-dbmy.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-dbmy.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-jie-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-jie-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-jie.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-jie.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-pfdyt-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-pfdyt-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-pfdyt.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-pfdyt.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-rgyyt-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-rgyyt-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-rgyyt.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-rgyyt.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-sx-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-sx-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-sx.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-sx.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-xc-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-xc-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-xc.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-xc.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-yhys-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yhys-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-yhys.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yhys.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-yy-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yy-ok.lrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lrc/mby-yy.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yy.lrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musicList_BF.js" beforeDir="false" afterPath="$PROJECT_DIR$/musicList_BF.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -14,17 +36,37 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/musicList_BF.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="548" column="10" selection-start-line="548" selection-start-column="10" selection-end-line="548" selection-end-column="10" />
+            <state relative-caret-position="629">
+              <caret line="940" column="25" selection-start-line="940" selection-start-column="25" selection-end-line="940" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="620" column="28" selection-start-line="620" selection-start-column="28" selection-end-line="620" selection-end-column="28" />
+              <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lrcOkText</find>
+      <find>test</find>
+      <find>replace</find>
+      <find>不染</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,6 +89,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -58,10 +101,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -89,24 +132,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714963580042</updated>
-      <workItem from="1714963581123" duration="13000" />
+      <workItem from="1714963581123" duration="675000" />
+      <workItem from="1714977699026" duration="22000" />
+      <workItem from="1714985605267" duration="3852000" />
+      <workItem from="1715043533642" duration="6808000" />
+      <workItem from="1715144786541" duration="31000" />
+      <workItem from="1720063023544" duration="133000" />
+      <workItem from="1729490682970" duration="210000" />
+      <workItem from="1729568981391" duration="3098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13000" />
+    <option name="totallyTimeSpent" value="14829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -114,6 +160,11 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="找到" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -123,10 +174,20 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="620" column="28" selection-start-line="620" selection-start-column="28" selection-end-line="620" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/musicList_BF.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="548" column="10" selection-start-line="548" selection-start-column="10" selection-end-line="548" selection-end-column="10" />
+        <state relative-caret-position="629">
+          <caret line="940" column="25" selection-start-line="940" selection-start-column="25" selection-end-line="940" selection-end-column="25" />
         </state>
       </provider>
     </entry>

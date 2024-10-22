@@ -835,5 +835,113 @@ let data={
             lrc: 'xw-shbzyqdgq.lrc',
             ok: 'xw-shbzyqdgq-ok.lrc'
         },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-amani.mp3',
+            songName: 'amani',
+            songAuto: 'beyond',
+            duration: 290,
+            cover: '',
+            lrc: 'beyond-amani.lrc',
+            ok: 'beyond-amani-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-bzyy.mp3',
+            songName: '不再犹豫',
+            songAuto: 'beyond',
+            duration: 254,
+            cover: '',
+            lrc: 'beyond-bzyy.lrc',
+            ok: 'beyond-bzyy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-dd.mp3',
+            songName: '大地',
+            songAuto: 'beyond',
+            duration: 261,
+            cover: '',
+            lrc: 'beyond-dd.lrc',
+            ok: 'beyond-dd-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-ghsy.mp3',
+            songName: '光辉岁月',
+            songAuto: 'beyond',
+            duration: 303,
+            cover: '',
+            lrc: 'beyond-ghsy.lrc',
+            ok: 'beyond-ghsy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-hktk.mp3',
+            songName: '海阔天空',
+            songAuto: 'beyond',
+            duration: 324,
+            cover: '',
+            lrc: 'beyond-hktk.lrc',
+            ok: 'beyond-hktk-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-hsgj.mp3',
+            songName: '灰色轨迹',
+            songAuto: 'beyond',
+            duration: 328,
+            cover: '',
+            lrc: 'beyond-hsgj.lrc',
+            ok: 'beyond-hsgj-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-jrdzj.mp3',
+            songName: '旧日的足迹',
+            songAuto: 'beyond',
+            duration: 264,
+            cover: '',
+            lrc: 'beyond-jrdzj.lrc',
+            ok: 'beyond-jrdzj-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-lyy.mp3',
+            songName: '冷雨夜',
+            songAuto: 'beyond',
+            duration: 259,
+            cover: '',
+            lrc: 'beyond-lyy.lrc',
+            ok: 'beyond-lyy-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-qr.mp3',
+            songName: '情人',
+            songAuto: 'beyond',
+            duration: 317,
+            cover: '',
+            lrc: 'beyond-qr.lrc',
+            ok: 'beyond-qr-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-sbwcd.mp3',
+            songName: '谁伴我闯荡',
+            songAuto: 'beyond',
+            duration: 252,
+            cover: '',
+            lrc: 'beyond-sbwcd.lrc',
+            ok: 'beyond-sbwcd-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-whzys.mp3',
+            songName: '无悔这一生',
+            songAuto: 'beyond',
+            duration: 236,
+            cover: '',
+            lrc: 'beyond-whzys.lrc',
+            ok: 'beyond-whzys-ok.lrc'
+        },
+        {
+            songUrl: 'https://music.leeao8.cn/lrc/beyond-zdan.mp3',
+            songName: '真的爱你',
+            songAuto: 'beyond',
+            duration: 275,
+            cover: '',
+            lrc: 'beyond-zdan.lrc',
+            ok: 'beyond-zdan-ok.lrc'
+        },
     ]
 }

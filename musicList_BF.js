@@ -840,7 +840,7 @@ let data={
             songName: 'amani',
             songAuto: 'beyond',
             duration: 290,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001Gikfw1MiLRm_2.jpg?max_age=2592000',
             lrc: 'beyond-amani.lrc',
             ok: 'beyond-amani-ok.lrc'
         },
@@ -849,7 +849,7 @@ let data={
             songName: '不再犹豫',
             songAuto: 'beyond',
             duration: 254,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001Gikfw1MiLRm_2.jpg?max_age=2592000',
             lrc: 'beyond-bzyy.lrc',
             ok: 'beyond-bzyy-ok.lrc'
         },
@@ -858,7 +858,7 @@ let data={
             songName: '大地',
             songAuto: 'beyond',
             duration: 261,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001oHxZZ1pAQn4_3.jpg?max_age=2592000',
             lrc: 'beyond-dd.lrc',
             ok: 'beyond-dd-ok.lrc'
         },
@@ -867,7 +867,7 @@ let data={
             songName: '光辉岁月',
             songAuto: 'beyond',
             duration: 303,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001fyfTp1AzDni_3.jpg?max_age=2592000',
             lrc: 'beyond-ghsy.lrc',
             ok: 'beyond-ghsy-ok.lrc'
         },
@@ -876,7 +876,7 @@ let data={
             songName: '海阔天空',
             songAuto: 'beyond',
             duration: 324,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002qcJuX3lO3EZ_1.jpg?max_age=2592000',
             lrc: 'beyond-hktk.lrc',
             ok: 'beyond-hktk-ok.lrc'
         },
@@ -885,7 +885,7 @@ let data={
             songName: '灰色轨迹',
             songAuto: 'beyond',
             duration: 328,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000004EOVA73heGrc_2.jpg?max_age=2592000',
             lrc: 'beyond-hsgj.lrc',
             ok: 'beyond-hsgj-ok.lrc'
         },
@@ -894,7 +894,7 @@ let data={
             songName: '旧日的足迹',
             songAuto: 'beyond',
             duration: 264,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002MGTsZ3Zl6JH_2.jpg?max_age=2592000',
             lrc: 'beyond-jrdzj.lrc',
             ok: 'beyond-jrdzj-ok.lrc'
         },
@@ -903,7 +903,7 @@ let data={
             songName: '冷雨夜',
             songAuto: 'beyond',
             duration: 259,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002MGTsZ3Zl6JH_2.jpg?max_age=2592000',
             lrc: 'beyond-lyy.lrc',
             ok: 'beyond-lyy-ok.lrc'
         },
@@ -912,7 +912,7 @@ let data={
             songName: '情人',
             songAuto: 'beyond',
             duration: 317,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000002qcJuX3lO3EZ_1.jpg?max_age=2592000',
             lrc: 'beyond-qr.lrc',
             ok: 'beyond-qr-ok.lrc'
         },
@@ -921,7 +921,7 @@ let data={
             songName: '谁伴我闯荡',
             songAuto: 'beyond',
             duration: 252,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000001Gikfw1MiLRm_2.jpg?max_age=2592000',
             lrc: 'beyond-sbwcd.lrc',
             ok: 'beyond-sbwcd-ok.lrc'
         },
@@ -930,7 +930,7 @@ let data={
             songName: '无悔这一生',
             songAuto: 'beyond',
             duration: 236,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000003XXfx92RMtUh_2.jpg?max_age=2592000',
             lrc: 'beyond-whzys.lrc',
             ok: 'beyond-whzys-ok.lrc'
         },
@@ -939,7 +939,7 @@ let data={
             songName: '真的爱你',
             songAuto: 'beyond',
             duration: 275,
-            cover: '',
+            cover: 'https://y.qq.com/music/photo_new/T002R300x300M000000eOgmK1fN8Cs_2.jpg?max_age=2592000',
             lrc: 'beyond-zdan.lrc',
             ok: 'beyond-zdan-ok.lrc'
         },

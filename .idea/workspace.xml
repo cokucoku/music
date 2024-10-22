@@ -2,28 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49daeb71-5374-415d-9462-fb12758a86f3" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/hyb-yg-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/hyb-yg-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/hyb-yg.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/hyb-yg.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-br-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-br-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-br.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-br.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-dbmy-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-dbmy-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-dbmy.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-dbmy.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-jie-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-jie-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-jie.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-jie.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-pfdyt-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-pfdyt-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-pfdyt.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-pfdyt.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-rgyyt-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-rgyyt-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-rgyyt.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-rgyyt.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-sx-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-sx-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-sx.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-sx.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-xc-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-xc-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-xc.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-xc.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-yhys-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yhys-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-yhys.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yhys.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-yy-ok.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yy-ok.lrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lrc/mby-yy.lrc" beforeDir="false" afterPath="$PROJECT_DIR$/lrc/mby-yy.lrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/musicList_BF.js" beforeDir="false" afterPath="$PROJECT_DIR$/musicList_BF.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -40,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/musicList_BF.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="940" column="25" selection-start-line="940" selection-start-column="25" selection-end-line="940" selection-end-column="25" />
+            <state relative-caret-position="648">
+              <caret line="941" column="105" selection-start-line="941" selection-start-column="105" selection-end-line="941" selection-end-column="105" />
             </state>
           </provider>
         </entry>
@@ -139,12 +117,12 @@
       <workItem from="1715144786541" duration="31000" />
       <workItem from="1720063023544" duration="133000" />
       <workItem from="1729490682970" duration="210000" />
-      <workItem from="1729568981391" duration="3098000" />
+      <workItem from="1729568981391" duration="5022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14829000" />
+    <option name="totallyTimeSpent" value="16753000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -186,8 +164,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/musicList_BF.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="940" column="25" selection-start-line="940" selection-start-column="25" selection-end-line="940" selection-end-column="25" />
+        <state relative-caret-position="648">
+          <caret line="941" column="105" selection-start-line="941" selection-start-column="105" selection-end-line="941" selection-end-column="105" />
         </state>
       </provider>
     </entry>
